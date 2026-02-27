@@ -12,7 +12,7 @@ import "./globals.css";
 export const metadata: Metadata = {
 
 
-  metadataBase: new URL("https://ex-media.vercel.app"),
+  metadataBase: new URL("https://ex-media-new.vercel.app"),
 
 
   title: {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 
   alternates: {
-    canonical: "https://ex-media.vercel.app",
+    canonical: "https://ex-media-new.vercel.app",
   },
 
   category: "Media",
@@ -61,11 +61,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ex Media — Premium Media",
     description: "Ex Media delivers premium content, expert service, and a passionate community since 2026.",
-    url: "https://ex-media.vercel.app",
+    url: "https://ex-media-new.vercel.app",
     siteName: "Ex Media",
     images: [
       {
-        url: "/LOGO-trans.png",
+        url: "https://ex-media-new.vercel.app/logo-white.jpeg",
         width: 1200,
         height: 630,
         alt: "Ex Media Premium Media",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ex Media — Premium Media",
     description: "Ex Media delivers premium content, expert service, and a passionate community since 2026.",
-    images: ["/logo.png"],
+    images: ["https://ex-media-new.vercel.app/logo-white.jpeg"],
   },
 
 

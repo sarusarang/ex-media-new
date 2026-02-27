@@ -11,11 +11,11 @@ import { Metadata } from "next";
 
 
 // Site URL for seo
-const siteUrl = "https://mister-chair.vercel.app";
+const siteUrl = "https://ex-media-new.vercel.app";
 
 
 // Social image (1200×630) px
-const socialImage = "https://mister-chair.vercel.app/logo.png";
+const socialImage = "https://ex-media-new.vercel.app/logo-white.jpeg";
 
 
 
