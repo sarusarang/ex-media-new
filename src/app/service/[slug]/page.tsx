@@ -4,6 +4,7 @@ import Threads from "@/components/Threads";
 import ColorBends from "@/components/ColorBends";
 import ServiceCategoryHub from "@/components/service/ServiceCategoryHub";
 import { Metadata } from "next";
+import SubCategory from "@/components/service/SubCategory";
 
 
 
@@ -94,87 +95,13 @@ export default async function ServiceDynamicPage({ params }: { params: Promise<{
 
     return (
 
+        <main className="min-h-screen bg-black text-white selection:bg-[#D32F2F] selection:text-white">
 
-        <main className="min-h-screen bg-white text-black pt-32 pb-24">
-
-
-            <div className="container mx-auto px-4 md:px-12 max-w-6xl">
-
-
-                {/* Clean Header */}
-                <div className="mb-16 md:mb-24">
-
-                    <span className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4 block">Service Details</span>
-
-                    <h1 className="text-5xl md:text-7xl font-serif font-medium tracking-tight mb-8 capitalize">{subServiceName}</h1>
-
-                    <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed">
-                        We deliver world-class {subServiceName} tailored precisely to elevate your brand&apos;s digital presence and drive measurable outcomes.
-                    </p>
-
-                </div>
-
-
-                {/* Stunning Image Feature */}
-                <div className="w-full aspect-21/9 rounded-3xl overflow-hidden mb-24 relative shadow-2xl">
-                    <img
-                        src={`https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop`}
-                        className="w-full h-full object-cover"
-                        alt={subServiceName}
-                    />
-                </div>
-
-
-                {/* Content Sections */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24">
-
-
-                    <div className="md:col-span-1">
-                        <h3 className="text-2xl font-serif font-bold mb-6">Our Approach</h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            Our methodology is rooted in deep research, strategic planning, and flawless execution. We utilize the latest tools and frameworks to ensure superior results.
-                        </p>
-                    </div>
-
-
-                    <div className="md:col-span-2">
-
-                        <h3 className="text-2xl font-serif font-bold mb-6">What You Get</h3>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-gray-600">
-
-                            <div>
-                                <h4 className="font-bold text-black mb-2 flex items-center gap-2">01. Strategy</h4>
-                                <p className="text-sm">End-to-end strategic planning aligned with your core KPIs.</p>
-                            </div>
-
-                            <div>
-                                <h4 className="font-bold text-black mb-2 flex items-center gap-2">02. Design</h4>
-                                <p className="text-sm">Bespoke, human-centric design leveraging modern principles.</p>
-                            </div>
-
-                            <div>
-                                <h4 className="font-bold text-black mb-2 flex items-center gap-2">03. Engineering</h4>
-                                <p className="text-sm">Scalable, secure, and performant technical implementation.</p>
-                            </div>
-
-                            <div>
-                                <h4 className="font-bold text-black mb-2 flex items-center gap-2">04. Optimization</h4>
-                                <p className="text-sm">Continuous testing and iterative improvements for ROI.</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <SubCategory subServiceName={subServiceName} />
 
         </main>
 
     );
-
 
 
 }
