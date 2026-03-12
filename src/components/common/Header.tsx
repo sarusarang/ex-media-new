@@ -88,7 +88,7 @@ export default function Header() {
             <div className="container mx-auto px-4 lg:px-12">
 
 
-                <div className="flex justify-between items-center h-16">
+                <div className="flex justify-between items-center h-20">
 
 
                     {/* Logo */}
@@ -101,7 +101,7 @@ export default function Header() {
                                 src="/LOGO-trans.png"
                                 alt="Exmedia"
                                 loading="lazy"
-                                className="h-10 md:h-16 w-auto object-contain"
+                                className="h-10 md:h-20 w-auto object-contain"
                             />
                         </motion.div>
                     </Link>
@@ -124,14 +124,15 @@ export default function Header() {
 
                                 <Link
                                     href={link.href}
-                                    className={`relative py-1 text-sm font-bold tracking-widest uppercase transition-all duration-300 hover:-translate-y-0.5 font-serif flex items-center gap-1 ${isTransparent ? "hover:text-gray-300" : "hover:text-gray-600"
+                                    className={`relative py-1 text-xs tracking-widest uppercase transition-all duration-300 hover:-translate-y-0.5 font-serif flex items-center gap-1 ${isTransparent ? "hover:text-gray-300" : "hover:text-gray-600"
                                         } ${(pathname === link.href && !isHome) || (isHome && pathname === link.href) || (link.name === "Service" && isServiceDropdownOpen)
-                                            ? "opacity-100"
+                                            ? "opacity-100 italic font-bold"
                                             : "opacity-80"
                                         }`}
                                 >
 
                                     {link.name}
+
                                     {link.name === "Service" && (
                                         <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isServiceDropdownOpen ? "rotate-180" : ""}`} />
                                     )}
@@ -139,7 +140,7 @@ export default function Header() {
                                     {pathname === link.href && (
                                         <motion.div
                                             layoutId="activeTab"
-                                            className={`absolute -bottom-1 left-0 right-0 h-0.5 ${isTransparent ? 'bg-white' : 'bg-black'}`}
+                                            className={`absolute bottom-0 left-0 right-0 h-0.5 ${isTransparent ? 'bg-white' : 'bg-black'}`}
                                         />
                                     )}
 
@@ -162,7 +163,7 @@ export default function Header() {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className={`group flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase transition-all font-serif italic hover:cursor-pointer ${isTransparent
+                                className={`group flex items-center gap-2 px-5 py-4 rounded-full text-xs font-bold tracking-wide uppercase transition-all font-serif italic hover:cursor-pointer ${isTransparent
                                     ? "bg-white text-black hover:bg-gray-100 hover:shadow-lg"
                                     : "bg-black text-white hover:bg-gray-800 hover:shadow-lg"
                                     }`}
@@ -287,6 +288,7 @@ export default function Header() {
 
 
             </AnimatePresence>
+
 
             {/* Desktop Service Dropdown */}
             <div className="hidden md:block">

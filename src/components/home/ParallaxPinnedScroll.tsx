@@ -318,11 +318,12 @@ const ZoomOutro = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
 
 
             {/* Multiply mask layer. White text becomes the window to see StaticNextSectionPreview underneath. Black stays black. */}
-            <motion.div style={{ scale, transformOrigin: "center center" }} className="absolute inset-0 flex items-center justify-center bg-black text-white mix-blend-multiply pointer-events-none">
+           
+            {/* <motion.div style={{ scale, transformOrigin: "center center" }} className="absolute inset-0 flex items-center justify-center bg-black text-white mix-blend-multiply pointer-events-none">
                 <h1 className="text-[18vw] md:text-[20vw] font-black tracking-tighter whitespace-nowrap leading-none mix-blend-normal">
                     EXMEDIA
                 </h1>
-            </motion.div>
+            </motion.div> */}
 
 
             {/* Solid thick white outline so the text is incredibly visible over the dark component */}
@@ -330,7 +331,7 @@ const ZoomOutro = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
 
                 <h1
                     className="text-[18vw] md:text-[20vw] font-black tracking-tighter whitespace-nowrap leading-none text-transparent"
-                    style={{ WebkitTextStroke: "6px rgba(255,255,255,0.9)" }}
+                    style={{ WebkitTextStroke: "3px rgba(255,255,255,0.9)" }}
                 >
                     EXMEDIA
                 </h1>
