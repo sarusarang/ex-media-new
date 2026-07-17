@@ -10,49 +10,61 @@ const serviceCategories = [
         title: "Branding",
         slug: "branding",
         items: [
-            { name: "Brand Consulting", href: "/service/brand-consulting" },
-            { name: "Logo Design", href: "/service/logo-design" },
-            { name: "Industrial / Product Design", href: "/service/product-design" },
-            { name: "Graphic Design", href: "/service/graphic-design" },
-            { name: "2D / 3D Visualisation", href: "/service/visualisation" },
+            { name: "Brand Strategy & Positioning", href: "/service/branding#brand-strategy-positioning" },
+            { name: "Visual Identity & Creative Design", href: "/service/branding#visual-identity-creative-design" },
+            { name: "Digital Branding & Online Presence", href: "/service/branding#digital-branding-online-presence" },
+            { name: "Advertising & Media Communication", href: "/service/branding#advertising-media-communication" },
+            { name: "Public Relations & Reputation Management", href: "/service/branding#public-relations-reputation-management" },
         ]
     },
     {
         title: "Experience Design",
         slug: "experience-design",
         items: [
-            { name: "UI/UX Design", href: "/service/ui-ux-design" },
-            { name: "Website Design", href: "/service/website-design" },
-            { name: "Mobile Experience", href: "/service/mobile-experience" },
-            { name: "Commerce Experience", href: "/service/commerce-experience" },
-            { name: "Human Machine Interface", href: "/service/hmi" },
+            { name: "Identity & Branding Design", href: "/service/experience-design#identity-branding-design" },
+            { name: "Marketing & Promotional Design", href: "/service/experience-design#marketing-promotional-design" },
+            { name: "UI/UX & Digital Asset Design", href: "/service/experience-design#ui-ux-digital-asset-design" },
+            { name: "Packaging & Environmental Design", href: "/service/experience-design#packaging-environmental-design" },
+            { name: "Motion Graphics & Video Design", href: "/service/experience-design#motion-graphics-video-design" },
+            { name: "Publication & Editorial Design", href: "/service/experience-design#publication-editorial-design" },
         ]
     },
     {
         title: "Technology",
         slug: "technology",
         items: [
-            { name: "AI & Machine Learning", href: "/service/ai-ml" },
-            { name: "DevOps Consulting", href: "/service/devops" },
-            { name: "Data & Analytics", href: "/service/data-analytics" },
-            { name: "Web Development", href: "/service/web-development" },
-            { name: "Mobile App Development", href: "/service/mobile-app" },
-            { name: "E-commerce", href: "/service/ecommerce" },
-            { name: "Quality Assurance & Testing", href: "/service/qa-testing" },
-            { name: "Cloud Services", href: "/service/cloud-services" },
-            { name: "Cyber Security", href: "/service/cyber-security" },
+            { name: "AI & Machine Learning", href: "/service/technology#ai-ml" },
+            { name: "DevOps Consulting", href: "/service/technology#devops" },
+            { name: "Data & Analytics", href: "/service/technology#data-analytics" },
+            { name: "Web Development", href: "/service/technology#web-development" },
+            { name: "Mobile App Development", href: "/service/technology#mobile-app" },
+            { name: "E-commerce", href: "/service/technology#ecommerce" },
+            { name: "Quality Assurance & Testing", href: "/service/technology#qa-testing" },
+            { name: "Cloud Services", href: "/service/technology#cloud-services" },
+            { name: "Cyber Security", href: "/service/technology#cyber-security" },
         ]
     },
     {
         title: "Digital Marketing",
         slug: "digital-marketing",
         items: [
-            { name: "Search Engine Optimisation", href: "/service/seo" },
-            { name: "Social Media Management", href: "/service/social-media" },
-            { name: "Performance Marketing", href: "/service/performance-marketing" },
-            { name: "Content Marketing", href: "/service/content-marketing" },
-            { name: "Marketing Automation", href: "/service/marketing-automation" },
-            { name: "Analytics", href: "/service/analytics" },
+            { name: "Search Engine Optimisation", href: "/service/digital-marketing#seo" },
+            { name: "Social Media Management", href: "/service/digital-marketing#social-media" },
+            { name: "Performance Marketing", href: "/service/digital-marketing#performance-marketing" },
+            { name: "Content Marketing", href: "/service/digital-marketing#content-marketing" },
+            { name: "Marketing Automation", href: "/service/digital-marketing#marketing-automation" },
+            { name: "Analytics", href: "/service/digital-marketing#analytics" },
+        ]
+    },
+    {
+        title: "Photography & Videography",
+        slug: "content-production",
+        items: [
+            { name: "Product Photography & Videography", href: "/service/content-production#product-photography-videography" },
+            { name: "E-Commerce & Catalog Photography", href: "/service/content-production#ecommerce-catalog-photography" },
+            { name: "Lifestyle & Contextual Imagery", href: "/service/content-production#lifestyle-contextual-imagery" },
+            { name: "Short-Form Video & Social Reels", href: "/service/content-production#short-form-video-social-reels" },
+            { name: "360° Product Spins & Stop-Motion", href: "/service/content-production#360-product-spins-stop-motion" },
         ]
     }
 ];
@@ -79,19 +91,19 @@ export const DesktopServiceDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onI
                         className="absolute top-0 right-0 w-1/2 lg:w-1/3 h-full origin-top bg-linear-to-l from-blue-600/20 via-blue-900/10 to-transparent pointer-events-none"
                     />
 
-                    <div className="container mx-auto px-4 lg:px-12 py-12 relative z-10 flex flex-col lg:flex-row gap-12">
+                    <div className="container mx-auto px-4 lg:px-12 py-14 relative z-10 flex flex-col lg:flex-row gap-10">
                         {/* Left Side: Capabilities Header */}
-                        <div className="w-full lg:w-1/4 flex flex-col justify-between">
+                        <div className="w-full lg:w-[220px] shrink-0 flex flex-col justify-between pr-8 lg:border-r lg:border-white/10">
                             <div>
-                                <h2 className="text-3xl md:text-4xl font-serif leading-tight mb-6 font-medium text-gray-100">
-                                    Building Strong<br />
-                                    Capabilities to<br />
-                                    Empower Your<br />
+                                <h2 className="text-2xl font-serif leading-tight mb-6 font-medium text-gray-100">
+                                    Building Strong
+                                    Capabilities to
+                                    Empower Your
                                     Brand
                                 </h2>
                             </div>
                             <div className="mt-8 lg:mt-0">
-                                <Link onClick={onItemClick} href="/service" className="group inline-flex items-center gap-2 text-sm font-semibold tracking-wider uppercase hover:text-[#D32F2F] transition-colors">
+                                <Link onClick={onItemClick} href="/service" className="group inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase hover:text-[#D32F2F] transition-colors">
                                     Go to overview
                                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </Link>
@@ -99,7 +111,7 @@ export const DesktopServiceDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onI
                         </div>
 
                         {/* Right Side: Columns */}
-                        <div className="w-full lg:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div className="flex-1 grid grid-cols-2 md:grid-cols-5 gap-x-8 gap-y-10 pl-2">
                             {serviceCategories.map((category, idx) => (
                                 <motion.div
                                     key={category.title}
@@ -109,18 +121,18 @@ export const DesktopServiceDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onI
                                     className="flex flex-col"
                                 >
                                     <Link onClick={onItemClick} href={`/service/${category.slug}`}>
-                                        <h3 className="text-sm font-bold tracking-wider uppercase mb-6 flex items-center gap-2 text-white group cursor-pointer hover:text-[#D32F2F] transition-colors">
+                                        <h3 className="text-[11px] font-bold tracking-wider uppercase mb-4 flex items-center gap-1.5 text-white group cursor-pointer hover:text-[#D32F2F] transition-colors">
                                             {category.title}
-                                            <ArrowUpRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                                            <ArrowUpRight className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-all" />
                                         </h3>
                                     </Link>
-                                    <ul className="space-y-4">
+                                    <ul className="space-y-3">
                                         {category.items.map((item) => (
                                             <li key={item.name}>
                                                 <Link
                                                     onClick={onItemClick}
                                                     href={item.href}
-                                                    className="text-gray-400 text-sm hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                                                    className="text-gray-400 text-[13px] leading-snug hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
                                                 >
                                                     {item.name}
                                                 </Link>

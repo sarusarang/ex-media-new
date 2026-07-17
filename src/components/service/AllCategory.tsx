@@ -99,6 +99,17 @@ export default function ServiceCategories() {
                         link="/service/technology"
                     />
 
+                    <SectionSeparator />
+
+                    {/* Photography & Videography Category */}
+                    <CategoryRow
+                        title="Photography & Videography"
+                        video="https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4"
+                        items={["Product Photography & Videography", "E-Commerce & Catalog Photography", "Lifestyle & Contextual Imagery", "Short-Form Video & Social Reels", "360° Product Spins & Stop-Motion"]}
+                        link="/service/content-production"
+                        reverse={true}
+                    />
+
 
                 </div>
 
@@ -125,6 +136,42 @@ function SectionSeparator() {
 
 
 
+
+// Helper mapping subcategory names to their respective hash slugs
+function getItemSlug(item: string): string {
+    const slugMap: Record<string, string> = {
+        "AI & Machine Learning": "ai-ml",
+        "DevOps Consulting": "devops",
+        "Cloud Services": "cloud-services",
+        "Cyber Security": "cyber-security",
+        "Web Development": "web-development",
+        "Mobile App Development": "mobile-app",
+        "Brand Strategy & Positioning": "brand-strategy-positioning",
+        "Visual Identity & Creative Design": "visual-identity-creative-design",
+        "Digital Branding & Online Presence": "digital-branding-online-presence",
+        "Advertising & Media Communication": "advertising-media-communication",
+        "Public Relations & Reputation Management": "public-relations-reputation-management",
+        "Identity & Branding Design": "identity-branding-design",
+        "Marketing & Promotional Design": "marketing-promotional-design",
+        "UI/UX & Digital Asset Design": "ui-ux-digital-asset-design",
+        "Packaging & Environmental Design": "packaging-environmental-design",
+        "Motion Graphics & Video Design": "motion-graphics-video-design",
+        "Publication & Editorial Design": "publication-editorial-design",
+        "Product Photography & Videography": "product-photography-videography",
+        "E-Commerce & Catalog Photography": "ecommerce-catalog-photography",
+        "Lifestyle & Contextual Imagery": "lifestyle-contextual-imagery",
+        "Short-Form Video & Social Reels": "short-form-video-social-reels",
+        "360° Product Spins & Stop-Motion": "360-product-spins-stop-motion"
+    };
+
+    if (slugMap[item]) return slugMap[item];
+    return item
+        .toLowerCase()
+        .replace(/ & /g, "-")
+        .replace(/ \/ /g, "-")
+        .replace(/ /g, "-")
+        .replace(/[&]/g, "-");
+}
 
 // Reusable Row Component for Categories
 function CategoryRow({ title, video, items, link, reverse = false }: { title: string, video: string, items: string[], link: string, reverse?: boolean }) {
@@ -154,25 +201,26 @@ function CategoryRow({ title, video, items, link, reverse = false }: { title: st
 
                     {items.map((item, idx) => (
 
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.4, delay: idx * 0.1 }}
-                            className="group/item border-b border-gray-200 py-6 pr-6 relative overflow-hidden flex items-center justify-between cursor-pointer"
-                        >
+                        <Link key={idx} href={`${link}#${getItemSlug(item)}`}>
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                                className="group/item border-b border-gray-200 py-6 pr-6 relative overflow-hidden flex items-center justify-between cursor-pointer"
+                            >
 
-                            {/* Hover accent background slide */}
-                            <div className="absolute inset-0 bg-gray-50 -translate-x-full group-hover/item:translate-x-0 transition-transform duration-500 ease-out z-0"></div>
+                                {/* Hover accent background slide */}
+                                <div className="absolute inset-0 bg-gray-50 -translate-x-full group-hover/item:translate-x-0 transition-transform duration-500 ease-out z-0"></div>
 
-                            <span className="text-xl md:text-2xl font-medium relative z-10 group-hover/item:text-[#D32F2F] transition-colors duration-300">
-                                {item}
-                            </span>
+                                <span className="text-xl md:text-2xl font-medium relative z-10 group-hover/item:text-[#D32F2F] transition-colors duration-300">
+                                    {item}
+                                </span>
 
-                            <ArrowUpRight className="w-6 h-6 text-gray-300 group-hover/item:text-[#D32F2F] group-hover/item:translate-x-1 group-hover/item:-translate-y-1 transition-all duration-300 relative z-10" />
+                                <ArrowUpRight className="w-6 h-6 text-gray-300 group-hover/item:text-[#D32F2F] group-hover/item:translate-x-1 group-hover/item:-translate-y-1 transition-all duration-300 relative z-10" />
 
-                        </motion.div>
+                            </motion.div>
+                        </Link>
 
                     ))}
 

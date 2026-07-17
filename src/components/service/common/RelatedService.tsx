@@ -50,9 +50,9 @@ export default function RelatedService({ category }: { category: any }) {
 
 
                     {[
-                        { name: "Digital Ecosystems", slug: "digital-ecosystems", desc: "Holistic, interconnected digital platforms built for scale." },
-                        { name: "Growth Marketing", slug: "growth-marketing", desc: "Data-driven acquisition and retention strategies." },
-                        { name: "Brand Architecture", slug: "brand-architecture", desc: "Structuring complex portfolios into cohesive brand systems." }
+                        { name: "Brand Strategy", href: "/service/branding#brand-consulting", desc: "Structuring complex brand identity portfolios into cohesive systems." },
+                        { name: "E-Commerce Platforms", href: "/service/technology#ecommerce", desc: "Bespoke digital storefronts and payment checkouts built to scale." },
+                        { name: "UI/UX Design", href: "/service/experience-design#ui-ux-design", desc: "Holistic, customer-centric interface workflows designed for engagement." }
 
                     ].map((related, idx) => (
 
@@ -62,9 +62,10 @@ export default function RelatedService({ category }: { category: any }) {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: idx * 0.1 }}
+                            className="h-full"
                         >
 
-                            <Link href={`/service/${related.slug}`} className="group block relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300">
+                            <Link href={related.href} className="group flex flex-col h-full relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300">
 
 
                                 {/* Image Detail */}
@@ -87,11 +88,11 @@ export default function RelatedService({ category }: { category: any }) {
 
 
                                 {/* Content matching top cards */}
-                                <div className="p-8">
+                                <div className="p-8 flex flex-col flex-1">
 
                                     <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">{related.name}</h3>
 
-                                    <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                                    <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
                                         {related.desc}
                                     </p>
 

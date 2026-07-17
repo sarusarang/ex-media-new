@@ -11,6 +11,7 @@ import Process from "./common/Process";
 import Faq from "./common/Faq";
 import RelatedService from "./common/RelatedService";
 import EnquiryForm from "../common/EnquiryForm";
+import SubCategoryExplorer from "./SubCategoryExplorer";
 
 
 
@@ -34,6 +35,11 @@ export default function ServiceCategoryHub({ category }: { category: any }) {
 
             {/* 1. {title} Services We Offer Section */}
             <WeOffer category={category} />
+
+
+
+            {/* Detailed Subcategory Specialisations Explorer */}
+            <SubCategoryExplorer category={category} />
 
 
 

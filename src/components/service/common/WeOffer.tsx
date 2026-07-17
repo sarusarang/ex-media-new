@@ -55,10 +55,11 @@ export default function WeOffer({ category }: { category: any }) {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ duration: 0.6, delay: idx * 0.1 }}
+                        className="h-full"
                     >
 
 
-                        <Link href={`/service/${sub.slug}`} className="group block relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300">
+                        <Link href={`/service/${category.slug}#${sub.slug}`} className="group flex flex-col h-full relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300">
 
 
                             {/* Dummy Image Detail */}
@@ -82,11 +83,11 @@ export default function WeOffer({ category }: { category: any }) {
 
 
                             {/* Content */}
-                            <div className="p-8">
+                            <div className="p-8 flex flex-col flex-1">
 
                                 <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">{sub.name}</h3>
 
-                                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
                                     Comprehensive and strategically engineered {sub.name.toLowerCase()} solutions tailored precisely to elevate your operations to the next frontier of growth.
                                 </p>
 

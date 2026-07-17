@@ -42,7 +42,7 @@ export default function EnquiryForm() {
     return (
 
 
-        <section className="py-10 md:py-16 bg-[#050505] relative overflow-hidden text-white font-sans w-full border-t border-white/5">
+        <section id="enquiry-form" className="py-10 md:py-16 bg-[#050505] relative overflow-hidden text-white font-sans w-full border-t border-white/5">
 
 
             {/* Abstract Background Elements */}

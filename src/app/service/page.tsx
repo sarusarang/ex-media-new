@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowUpRight, Sparkles, Target, Lightbulb, Rocket, TrendingUp } from "lucide-react";
+import { Sparkles, Target, Lightbulb, Rocket, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import HeroBanner from "@/components/service/common/HeroBanner";
 import LightPillar from "@/components/LightPillar";
