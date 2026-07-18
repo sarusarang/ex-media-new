@@ -4,70 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
+import { servicesData } from "@/lib/servicesData";
 
-const serviceCategories = [
-    {
-        title: "Branding",
-        slug: "branding",
-        items: [
-            { name: "Brand Strategy & Positioning", href: "/service/branding#brand-strategy-positioning" },
-            { name: "Visual Identity & Creative Design", href: "/service/branding#visual-identity-creative-design" },
-            { name: "Digital Branding & Online Presence", href: "/service/branding#digital-branding-online-presence" },
-            { name: "Advertising & Media Communication", href: "/service/branding#advertising-media-communication" },
-            { name: "Public Relations & Reputation Management", href: "/service/branding#public-relations-reputation-management" },
-        ]
-    },
-    {
-        title: "Experience Design",
-        slug: "experience-design",
-        items: [
-            { name: "Identity & Branding Design", href: "/service/experience-design#identity-branding-design" },
-            { name: "Marketing & Promotional Design", href: "/service/experience-design#marketing-promotional-design" },
-            { name: "UI/UX & Digital Asset Design", href: "/service/experience-design#ui-ux-digital-asset-design" },
-            { name: "Packaging & Environmental Design", href: "/service/experience-design#packaging-environmental-design" },
-            { name: "Motion Graphics & Video Design", href: "/service/experience-design#motion-graphics-video-design" },
-            { name: "Publication & Editorial Design", href: "/service/experience-design#publication-editorial-design" },
-        ]
-    },
-    {
-        title: "Technology",
-        slug: "technology",
-        items: [
-            { name: "AI & Machine Learning", href: "/service/technology#ai-ml" },
-            { name: "DevOps Consulting", href: "/service/technology#devops" },
-            { name: "Data & Analytics", href: "/service/technology#data-analytics" },
-            { name: "Web Development", href: "/service/technology#web-development" },
-            { name: "Mobile App Development", href: "/service/technology#mobile-app" },
-            { name: "E-commerce", href: "/service/technology#ecommerce" },
-            { name: "Quality Assurance & Testing", href: "/service/technology#qa-testing" },
-            { name: "Cloud Services", href: "/service/technology#cloud-services" },
-            { name: "Cyber Security", href: "/service/technology#cyber-security" },
-        ]
-    },
-    {
-        title: "Digital Marketing",
-        slug: "digital-marketing",
-        items: [
-            { name: "Search Engine Optimisation", href: "/service/digital-marketing#seo" },
-            { name: "Social Media Management", href: "/service/digital-marketing#social-media" },
-            { name: "Performance Marketing", href: "/service/digital-marketing#performance-marketing" },
-            { name: "Content Marketing", href: "/service/digital-marketing#content-marketing" },
-            { name: "Marketing Automation", href: "/service/digital-marketing#marketing-automation" },
-            { name: "Analytics", href: "/service/digital-marketing#analytics" },
-        ]
-    },
-    {
-        title: "Photography & Videography",
-        slug: "content-production",
-        items: [
-            { name: "Product Photography & Videography", href: "/service/content-production#product-photography-videography" },
-            { name: "E-Commerce & Catalog Photography", href: "/service/content-production#ecommerce-catalog-photography" },
-            { name: "Lifestyle & Contextual Imagery", href: "/service/content-production#lifestyle-contextual-imagery" },
-            { name: "Short-Form Video & Social Reels", href: "/service/content-production#short-form-video-social-reels" },
-            { name: "360° Product Spins & Stop-Motion", href: "/service/content-production#360-product-spins-stop-motion" },
-        ]
-    }
-];
+// Derived from servicesData — single source of truth.
+// Adding/editing a category or subcategory in servicesData.ts auto-updates the navbar.
+const serviceCategories = Object.values(servicesData).map((category) => ({
+    title: category.title,
+    slug: category.slug,
+    items: category.subServices.map((sub) => ({
+        name: sub.name,
+        href: `/service/${category.slug}#${sub.slug}`,
+    })),
+}));
 
 export const DesktopServiceDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }: { isOpen: boolean; onMouseEnter: () => void; onMouseLeave: () => void; onItemClick: () => void }) => {
     return (

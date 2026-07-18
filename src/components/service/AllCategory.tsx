@@ -1,18 +1,25 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { servicesData } from "@/lib/servicesData";
 
-
-
-
+// Map category slugs to video URLs (add/update as needed)
+const categoryVideos: Record<string, string> = {
+    "branding": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
+    "experience-design": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
+    "technology": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
+    "digital-marketing": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
+    "content-production": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
+};
 
 // Interactive Service Categories Sub-component
 export default function ServiceCategories() {
 
-
+    const categories = Object.values(servicesData);
 
     return (
-
 
         <section className="py-10 md:py-16 bg-white text-black relative overflow-hidden">
 
@@ -65,51 +72,18 @@ export default function ServiceCategories() {
                 {/* Categories Layout */}
                 <div className="flex flex-col">
 
-
-                    {/* Experience Design Category */}
-                    <CategoryRow
-                        title="Experience Design"
-                        video="https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4"
-                        items={["UI/UX Design", "Website Design", "Mobile Experience", "Commerce Experience", "Human Machine Interface", "Applications and Dashboards"]}
-                        link="/service/experience-design"
-                    />
-
-
-                    <SectionSeparator />
-
-
-                    {/* Branding Category */}
-                    <CategoryRow
-                        title="Branding & Identity"
-                        video="https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4"
-                        items={["Brand Strategy", "Visual Identity", "Naming & Messaging", "Brand Guidelines", "Corporate Rebranding", "Packaging Design"]}
-                        link="/service/branding"
-                        reverse={true}
-                    />
-
-
-                    <SectionSeparator />
-
-
-                    {/* Technology Category */}
-                    <CategoryRow
-                        title="Advanced Technology"
-                        video="https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4"
-                        items={["Custom Software Development", "AI & Machine Learning", "Cloud Architecture", "E-Commerce Platforms", "API Integrations", "DevOps & Maintenance"]}
-                        link="/service/technology"
-                    />
-
-                    <SectionSeparator />
-
-                    {/* Photography & Videography Category */}
-                    <CategoryRow
-                        title="Photography & Videography"
-                        video="https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4"
-                        items={["Product Photography & Videography", "E-Commerce & Catalog Photography", "Lifestyle & Contextual Imagery", "Short-Form Video & Social Reels", "360° Product Spins & Stop-Motion"]}
-                        link="/service/content-production"
-                        reverse={true}
-                    />
-
+                    {categories.map((category, idx) => (
+                        <div key={category.slug}>
+                            <CategoryRow
+                                title={category.title}
+                                video={categoryVideos[category.slug] ?? "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4"}
+                                subServices={category.subServices}
+                                link={`/service/${category.slug}`}
+                                reverse={idx % 2 !== 0}
+                            />
+                            {idx < categories.length - 1 && <SectionSeparator />}
+                        </div>
+                    ))}
 
                 </div>
 
@@ -137,48 +111,16 @@ function SectionSeparator() {
 
 
 
-// Helper mapping subcategory names to their respective hash slugs
-function getItemSlug(item: string): string {
-    const slugMap: Record<string, string> = {
-        "AI & Machine Learning": "ai-ml",
-        "DevOps Consulting": "devops",
-        "Cloud Services": "cloud-services",
-        "Cyber Security": "cyber-security",
-        "Web Development": "web-development",
-        "Mobile App Development": "mobile-app",
-        "Brand Strategy & Positioning": "brand-strategy-positioning",
-        "Visual Identity & Creative Design": "visual-identity-creative-design",
-        "Digital Branding & Online Presence": "digital-branding-online-presence",
-        "Advertising & Media Communication": "advertising-media-communication",
-        "Public Relations & Reputation Management": "public-relations-reputation-management",
-        "Identity & Branding Design": "identity-branding-design",
-        "Marketing & Promotional Design": "marketing-promotional-design",
-        "UI/UX & Digital Asset Design": "ui-ux-digital-asset-design",
-        "Packaging & Environmental Design": "packaging-environmental-design",
-        "Motion Graphics & Video Design": "motion-graphics-video-design",
-        "Publication & Editorial Design": "publication-editorial-design",
-        "Product Photography & Videography": "product-photography-videography",
-        "E-Commerce & Catalog Photography": "ecommerce-catalog-photography",
-        "Lifestyle & Contextual Imagery": "lifestyle-contextual-imagery",
-        "Short-Form Video & Social Reels": "short-form-video-social-reels",
-        "360° Product Spins & Stop-Motion": "360-product-spins-stop-motion"
-    };
-
-    if (slugMap[item]) return slugMap[item];
-    return item
-        .toLowerCase()
-        .replace(/ & /g, "-")
-        .replace(/ \/ /g, "-")
-        .replace(/ /g, "-")
-        .replace(/[&]/g, "-");
-}
-
 // Reusable Row Component for Categories
-function CategoryRow({ title, video, items, link, reverse = false }: { title: string, video: string, items: string[], link: string, reverse?: boolean }) {
-
+function CategoryRow({ title, video, subServices, link, reverse = false }: {
+    title: string;
+    video: string;
+    subServices: { name: string; slug: string }[];
+    link: string;
+    reverse?: boolean;
+}) {
 
     return (
-
 
         <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-24 relative group/row`}>
 
@@ -199,9 +141,9 @@ function CategoryRow({ title, video, items, link, reverse = false }: { title: st
 
                 <div className="flex flex-col w-full">
 
-                    {items.map((item, idx) => (
+                    {subServices.map((sub, idx) => (
 
-                        <Link key={idx} href={`${link}#${getItemSlug(item)}`}>
+                        <Link key={sub.slug} href={`${link}#${sub.slug}`}>
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -214,7 +156,7 @@ function CategoryRow({ title, video, items, link, reverse = false }: { title: st
                                 <div className="absolute inset-0 bg-gray-50 -translate-x-full group-hover/item:translate-x-0 transition-transform duration-500 ease-out z-0"></div>
 
                                 <span className="text-xl md:text-2xl font-medium relative z-10 group-hover/item:text-[#D32F2F] transition-colors duration-300">
-                                    {item}
+                                    {sub.name}
                                 </span>
 
                                 <ArrowUpRight className="w-6 h-6 text-gray-300 group-hover/item:text-[#D32F2F] group-hover/item:translate-x-1 group-hover/item:-translate-y-1 transition-all duration-300 relative z-10" />

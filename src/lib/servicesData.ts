@@ -32,41 +32,41 @@ export const servicesData: Record<string, CategoryData> = {
             {
                 name: "Brand Strategy & Positioning",
                 slug: "brand-strategy-positioning",
-                desc: "This is the foundation of branding. It defines the brand’s mission, vision, values, target audience, competitive positioning, and unique selling proposition (USP). A strong brand strategy ensures consistent messaging and long-term market differentiation.",
-                chooseUs: ["Mission & Vision Definition", "Competitor Matrix Positioning", "Target Audience Profiling", "USP Architecture"],
-                deliverables: ["Brand Core Document", "Positioning Guidelines", "Value Proposition Deck"],
+                desc: "Develops strategic brand positioning that defines your unique market identity, strengthens customer perception, builds competitive advantage, and creates consistent brand experiences that drive long-term business growth.",
+                chooseUs: ["Brand Identity & Market Positioning", "Target Audience & Customer Insights", "Competitive Brand Analysis", "Brand Value Proposition Development"],
+                deliverables: ["Comprehensive Brand Strategy Document", "Unique Positioning Statement", "Brand Messaging Framework", "Brand Growth & Implementation Roadmap"],
                 image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Visual Identity & Creative Design",
                 slug: "visual-identity-creative-design",
-                desc: "This includes logo design, color palette, typography, brand guidelines, packaging design, and overall visual communication. A consistent visual identity builds recognition, trust, and memorability across all platforms.",
-                chooseUs: ["Logo Design Engineering", "Color Palette Psychology", "Typography Systems", "Brand Guideline Documents"],
-                deliverables: ["Logo Suite (Primary/Secondary)", "Creative Guidelines Assets", "Packaging Layout Designs"],
+                desc: "Creates impactful visual identities that reflect your brand personality, enhance recognition, ensure consistency across platforms, and deliver compelling creative designs that inspire trust, engagement, and lasting impressions.",
+                chooseUs: ["Logo & Brand Identity Design", "Brand Color Palette & Typography", "Marketing & Corporate Collateral Design", "Digital & Print Creative Solutions"],
+                deliverables: ["Professional Logo & Brand Identity System", "Brand Style Guidelines", "Marketing Collateral Design Package", "Social Media & Digital Creative Assets"],
                 image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Digital Branding & Online Presence",
                 slug: "digital-branding-online-presence",
-                desc: "Focuses on website design, SEO, social media branding, content marketing, and online reputation management. In today’s digital-first world, brands must create engaging and culturally adapted digital experiences.",
-                chooseUs: ["Frictionless Website Aesthetics", "Social Channel Unity", "Content Consistency Focus", "Brand Image Protection"],
-                deliverables: ["Digital Brand Styleguide", "Social Media Theme Kits", "SEO Asset Architecture"],
+                desc: "Builds powerful digital brands through strategic online presence, engaging content, optimized platforms, and consistent customer experiences that increase visibility, credibility, audience engagement, and sustainable business growth.",
+                chooseUs: ["Website & Digital Experience", "Social Media Branding", "Search Engine Visibility (SEO)", "Content Strategy & Online Engagement"],
+                deliverables: ["Responsive Business Website", "Social Media Brand Kit", "SEO & Digital Visibility Strategy", "Content Calendar & Brand Guidelines"],
                 image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Advertising & Media Communication",
                 slug: "advertising-media-communication",
-                desc: "Covers campaign creation, media planning, and ad placements across TV, print, radio, digital platforms, and outdoor media. Strategic advertising increases brand awareness and strengthens market positioning.",
-                chooseUs: ["Campaign Ideation Rigor", "Media Buying Analytics", "Multichannel Placement", "Visual Creative Assets"],
-                deliverables: ["Campaign Creative Swipes", "Media Plan Schedules", "Outdoor & Digital Ad Formats"],
+                desc: "Delivers result-driven advertising and integrated media communication strategies that maximize brand visibility, engage target audiences, strengthen market presence, and generate measurable business growth across digital and traditional platforms.",
+                chooseUs: ["Integrated Advertising Campaigns", "Digital & Traditional Media Planning", "Brand Communication Strategy", "Performance Marketing & Audience Engagement"],
+                deliverables: ["End-to-End Advertising Campaign Plan", "Media Planning & Buying Strategy", "Creative Advertising Assets", "Campaign Performance Analytics & Optimization"],
                 image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Public Relations & Reputation Management",
                 slug: "public-relations-reputation-management",
-                desc: "Manages media relations, press releases, crisis communication, and public perception. This service helps build credibility, maintain trust, and protect the brand’s image in competitive markets.",
-                chooseUs: ["Strategic Media Relations", "Crisis Playbook Drafting", "Press Release Distribution", "Sentiment Audits"],
-                deliverables: ["PR Media Pitch Kits", "Crisis Response Guidelines", "Publicity Sentiment Reports"],
+                desc: "Builds trusted brand reputations through strategic public relations, media engagement, crisis communication, and reputation management, strengthening credibility, fostering stakeholder confidence, and ensuring long-term brand value.",
+                chooseUs: ["Media Relations & Press Communication", "Corporate Reputation Management", "Crisis Communication Planning", "Stakeholder & Community Engagement"],
+                deliverables: ["Public Relations Strategy", "Press Releases & Media Kits", "Crisis Communication Framework", "Reputation Monitoring & Performance Reports"],
                 image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
             }
         ],
@@ -123,49 +123,49 @@ export const servicesData: Record<string, CategoryData> = {
             {
                 name: "Identity & Branding Design",
                 slug: "identity-branding-design",
-                desc: "Identity & Branding Design serves as the strategic heartbeat of your business. We craft iconic logos, intentional color systems, and comprehensive style guides that distill your brand’s mission into a powerful visual legacy. This foundational segment ensures a premium, cohesive identity that builds immediate trust and global recognition.",
-                chooseUs: ["Iconic Logo Crafting", "Intentional Color Systems", "Cohesive Style Guides", "Visual Legacy Building"],
-                deliverables: ["Custom Logo Vectors", "Brand Color Guidelines", "Corporate Style Manuals"],
+                desc: "Designs distinctive brand identities that communicate your vision, strengthen recognition, establish credibility, and create memorable visual experiences that connect with audiences across every customer touchpoint.",
+                chooseUs: ["Logo & Brand Identity Design", "Brand Naming & Visual Systems", "Typography & Color Strategy", "Corporate Stationery & Brand Collateral"],
+                deliverables: ["Professional Logo Design", "Complete Brand Identity System", "Brand Style Guide", "Corporate Branding & Marketing Assets"],
                 image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Marketing & Promotional Design",
                 slug: "marketing-promotional-design",
-                desc: "Our Marketing & Promotional Design is engineered to convert attention into action. We create high-impact social media assets, persuasive brochures, and dynamic ad campaigns that \"stop the scroll.\" By blending psychological triggers with striking aesthetics, we ensure your brand’s message cuts through the noise and drives measurable growth.",
-                chooseUs: ["Scroll-Stopping Assets", "Persuasive Copy Layouts", "Aesthetic Ad Campaigns", "Psychological Trigger Designs"],
-                deliverables: ["Social Media Asset Templates", "Promotional Brochure PDFs", "Ad Placement Graphics"],
+                desc: "Creates impactful marketing and promotional designs that capture attention, communicate brand messages effectively, enhance customer engagement, and drive successful campaigns across print, digital, and outdoor media.",
+                chooseUs: ["Campaign & Advertising Creatives", "Print & Digital Marketing Materials", "Promotional Branding Solutions", "Social Media Creative Design"],
+                deliverables: ["Marketing Campaign Design Package", "Brochures, Flyers & Posters", "Social Media Creative Assets", "Outdoor Advertising & Promotional Graphics"],
                 image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "UI/UX & Digital Asset Design",
                 slug: "ui-ux-digital-asset-design",
-                desc: "The UI/UX & Digital Asset Design focuses on creating seamless, high-conversion digital experiences. We blend intuitive navigation with striking aesthetics to build websites and mobile interfaces that do more than just look good—they guide users effortlessly toward action. From wireframes to final polish, we ensure your brand excels in the digital-first world.",
-                chooseUs: ["Frictionless Navigation UX", "High-Conversion Interface Layouts", "High-fidelity Desktop/Mobile Wireframes", "Polished Vector Icons"],
-                deliverables: ["Figma UX Wireframe Flows", "Interactive Screen Prototypes", "Developer Asset Packs"],
+                desc: "Our intuitive user interfaces and engaging digital assets that enhance user experiences, strengthen brand consistency, improve usability, and drive meaningful interactions across websites, mobile applications, and digital platforms.",
+                chooseUs: ["UI/UX Research & Wireframing", "Website & Mobile App Interface Design", "User Experience Optimization", "Digital Asset & Icon Design"],
+                deliverables: ["UI/UX Design System", "Interactive Wireframes & Prototypes", "Website & Mobile App UI Designs", "Custom Digital Assets & Icon Library"],
                 image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Packaging & Environmental Design",
                 slug: "packaging-environmental-design",
-                desc: "Dedicated Packaging & Environmental Design brings your brand into the tangible world. We craft high-impact product packaging and immersive physical spaces—from retail interiors to exhibition stalls—that tell your story. By blending structural innovation with striking aesthetics, we ensure every physical touchpoint reinforces premium quality and leaves a lasting impression.",
-                chooseUs: ["Structural Package Innovation", "Immersive Environmental Retail Design", "Exhibition Stall Layouts", "Premium Material Suggestions"],
-                deliverables: ["Product Packaging Renders", "Environmental Interior CADs", "Exhibition Stall Mockups"],
+                desc: "We provide innovative packaging and environmental designs that elevate product appeal, reinforce brand identity, enhance customer experiences, and deliver memorable visual impact across retail and physical spaces.",
+                chooseUs: ["Product Packaging Design", "Retail & Point-of-Sale Branding", "Exhibition & Event Space Design", "Signage & Environmental Graphics"],
+                deliverables: ["Custom Packaging Design System", "Product Labels & Packaging Artwork", "Retail Display & Signage Designs", "Exhibition Booth & Environmental Graphics Package"],
                 image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Motion Graphics & Video Design",
                 slug: "motion-graphics-video-design",
-                desc: "Dynamic Motion Graphics & Video Design breathes life into static branding through cinematic storytelling. From animated logos and 3D architectural walkthroughs to high-energy social media reels, we combine fluid movement with strategic messaging. This segment ensures your brand captures attention instantly, simplifying complex ideas into engaging, \"scroll-stopping\" visual experiences.",
-                chooseUs: ["Cinematic Narrative Timelines", "Fluid Motion Graphic Renders", "3D Architecture Walkthroughs", "High-Energy Video Editing"],
-                deliverables: ["Animated Logo Videos", "3D Architectural Render Flyovers", "Promo Reels & Social Clips"],
+                desc: "Produces engaging motion graphics and professional video content that communicate brand stories, captivate audiences, enhance digital engagement, and deliver impactful visual experiences across every marketing platform.",
+                chooseUs: ["Motion Graphics & Animation", "Corporate & Promotional Videos", "Social Media Video Content", "2D/3D Visual Storytelling"],
+                deliverables: ["Motion Graphics & Animated Videos", "Corporate & Brand Promotional Films", "Social Media Video Creatives", "Product Explainer & Commercial Videos"],
                 image: "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Publication & Editorial Design",
                 slug: "publication-editorial-design",
-                desc: "Publication & Editorial Design transforms complex information into high-end visual narratives. We specialize in structuring annual reports, digital magazines, and product catalogs with a focus on readability and sophisticated layout. By balancing white space, typography, and imagery, we ensure your long-form content maintains authority and reinforces your brand’s premium status.",
-                chooseUs: ["White-Space Balance Theory", "Sophisticated Typography Layouts", "High-Readability Catalogs", "Corporate Authority Focus"],
-                deliverables: ["Annual Report Layout PDFs", "Digital Magazine Mockups", "Product Catalog Print Templates"],
+                desc: "Delivers professional publication and editorial designs that communicate information clearly, strengthen brand credibility, enhance readability, and create visually engaging print and digital publishing experiences.",
+                chooseUs: ["Magazine & Book Design", "Brochure & Catalogue Layout", "Annual Report & Corporate Publications", "Digital Publications & eBooks"],
+                deliverables: ["Magazine & Book Layout Design", "Brochures, Catalogues & Company Profiles", "Annual Reports & Corporate Publications", "Interactive PDF & eBook Designs"],
                 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
             }
         ],
@@ -315,51 +315,51 @@ export const servicesData: Record<string, CategoryData> = {
         desc: "Data-driven, high-performance campaigns engineered to maximize reach and drive conversions.",
         subServices: [
             {
-                name: "Search Engine Optimisation",
-                slug: "seo",
-                desc: "Improving site indexing, keywords targeting, and backlink authority to grow organic traffic.",
-                chooseUs: ["Technical Page Speed Audits", "Topic Cluster Architectures", "High-authority Link Profiles", "Local Search Dominance Strategy"],
-                deliverables: ["SEO Keyword Focus Matrix", "Technical Audit Checklist", "Backlink Strategy Plans"],
-                image: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1200&auto=format&fit=crop"
-            },
-            {
                 name: "Social Media Management",
                 slug: "social-media",
-                desc: "Building digital social communities, content calendars, and running organic brand engagement.",
-                chooseUs: ["Custom Social Graphics", "Cohesive Content Calendaring", "Interactive Community Dialogues", "Performance Analytics Review"],
-                deliverables: ["Monthly Content Calendars", "Social Media Graphics Templates", "Campaign Engagement Reports"],
+                desc: "Manages strategic social media presence through compelling content, audience engagement, performance optimization, and data-driven campaigns that increase brand awareness, customer loyalty, and measurable business growth.",
+                chooseUs: ["Social Media Strategy & Planning", "Content Creation & Publishing", "Community Engagement & Brand Management", "Performance Analytics & Campaign Optimization"],
+                deliverables: ["Monthly Content Calendar", "Creative Social Media Posts & Reels", "Community Management & Response Strategy", "Performance Reports & Growth Insights"],
                 image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Performance Marketing",
                 slug: "performance-marketing",
-                desc: "Designing and scaling paid ad campaigns on Google Search, Meta Ads, and LinkedIn.",
-                chooseUs: ["ROAS-focused Optimization", "Ad Copy Dynamic Variants", "Audience Retargeting Frameworks", "Conversion Tracker Integrity"],
-                deliverables: ["Ad Account Architecture Setup", "Creative Ad Copy Swipes", "Live Campaign Performance Dashboards"],
+                desc: "Delivers data-driven performance marketing campaigns that maximize conversions, optimize advertising spend, generate qualified leads, and achieve measurable business growth through continuous analysis and strategic optimization.",
+                chooseUs: ["Paid Search & Social Advertising", "Lead Generation Campaigns", "Conversion Rate Optimization (CRO)", "Campaign Performance Analytics"],
+                deliverables: ["Multi-Platform Advertising Campaigns", "Lead Generation & Conversion Strategy", "Campaign Performance Dashboard", "ROI Analysis & Optimization Reports"],
                 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Content Marketing",
                 slug: "content-marketing",
-                desc: "Writing high-value blog posts, newsletters, and lead magnets that educate and convert readers.",
-                chooseUs: ["High-intent Educational Copy", "Lead Magnet Optimization", "Consistent Brand Voice Alignment", "Repurposable Content Framework"],
-                deliverables: ["Blog Articles & Newsletter Swipes", "Premium Lead Magnet PDFs", "Editorial Strategy Timelines"],
+                desc: "Exmedia creates strategic content that educates, engages, and converts audiences through compelling storytelling, valuable insights, and consistent brand communication across digital platforms to drive sustainable business growth.",
+                chooseUs: ["Content Strategy & Planning", "Copywriting & Brand Storytelling", "Blog, Article & Website Content", "Multi-Platform Content Distribution"],
+                deliverables: ["Content Marketing Strategy", "SEO-Optimized Website & Blog Content", "Social Media Content Calendar", "Content Performance & Engagement Reports"],
                 image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Marketing Automation",
                 slug: "marketing-automation",
-                desc: "Setting up drip email automations, customer segment tracking, and lead-scoring software.",
-                chooseUs: ["Automated Nurture Triggers", "Dynamic Segment Splitting", "Email Delivery Reputation Guard", "CRM Synchronization Workflows"],
-                deliverables: ["Email Sequence Workflows", "CRM Lead Stage Blueprints", "Subscriber Sign-up Form Layouts"],
+                desc: "Streamlines marketing operations through intelligent automation, personalized customer journeys, lead nurturing, and workflow optimization, improving engagement, boosting conversions, and increasing operational efficiency across digital channels.",
+                chooseUs: ["Marketing Workflow Automation", "Lead Nurturing & Customer Journeys", "Email & WhatsApp Automation", "CRM Integration & Campaign Management"],
+                deliverables: ["Automated Marketing Workflows", "Lead Nurturing Campaigns", "Email & WhatsApp Automation Setup", "CRM Integration & Performance Dashboard"],
                 image: "https://images.unsplash.com/photo-1557200134-90327ee9fafa?q=80&w=1200&auto=format&fit=crop"
+            },
+            {
+                name: "Search Engine Optimisation",
+                slug: "seo",
+                desc: "Improves your search engine visibility through strategic SEO, technical optimization, quality content, and performance analysis, driving organic traffic, qualified leads, and sustainable long-term business growth.",
+                chooseUs: ["Technical SEO Optimization", "On-Page & Off-Page SEO", "Keyword Research & Content Strategy", "SEO Performance Monitoring"],
+                deliverables: ["Comprehensive SEO Audit Report", "Keyword & Competitor Analysis", "On-Page & Technical SEO Implementation", "Monthly SEO Performance & Ranking Reports"],
+                image: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Analytics",
                 slug: "analytics",
-                desc: "Setting up comprehensive web analytics dashboards to track user attribution and multi-touch conversions.",
-                chooseUs: ["GA4 Custom Event Setup", "Multi-touch Attribution Models", "Data-driven Budget Reallocation", "Privacy-first Cookieless Tracking"],
-                deliverables: ["Custom Google Analytics Setups", "Attribution Flow Diagrams", "Monthly ROI Tracking Systems"],
+                desc: "Transforms marketing data into actionable insights through advanced analytics, performance tracking, audience behavior analysis, and campaign optimization, enabling informed decisions that maximize growth and return on investment.",
+                chooseUs: ["Social Media Performance Analytics", "Marketing Campaign Measurement", "Audience & Customer Behavior Analysis", "ROI Tracking & Data Visualization"],
+                deliverables: ["Social Media Analytics Dashboard", "Marketing Performance Reports", "Audience Insights & Engagement Analysis", "Campaign Optimization & ROI Recommendations"],
                 image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop"
             }
         ],
@@ -395,42 +395,34 @@ export const servicesData: Record<string, CategoryData> = {
             {
                 name: "Product Photography & Videography",
                 slug: "product-photography-videography",
-                desc: "Our professional approach can transform your offerings into visual masterpieces. Using high-end lighting, styling, and 4K cinematography, we capture every detail with precision. From \"hero shots\" for e-commerce to dynamic lifestyle videos, we create high-conversion assets that elevate your brand's perceived value.",
-                chooseUs: ["High-End Studio Lighting", "4K Cinematography", "Hero Shot Composition", "High-Conversion Asset Creation"],
-                deliverables: ["4K RAW Product Videos", "Hero Shot Photography", "E-Commerce Ready Visuals"],
+                desc: "Attend Premium product photography and cinematic videography that showcase quality, highlight unique features, enhance brand appeal, and increase customer engagement across e-commerce, advertising, and digital platforms.",
+                chooseUs: ["Commercial Product Photography", "Product Promotional Videography", "E-commerce & Catalogue Shoots", "Lifestyle & Brand Visual Production"],
+                deliverables: ["High-Resolution Product Images", "Product Promotional & Commercial Videos", "E-commerce Catalogue Visuals", "Professionally Edited Photo & Video Assets"],
                 image: "https://images.unsplash.com/photo-1452697620382-f6543ead73b5?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "E-Commerce & Catalog Photography",
                 slug: "ecommerce-catalog-photography",
-                desc: "We deliver high-quality, conversion-focused visuals that elevate product presentation and strengthen brand identity. From concept development and styling to professional shooting and post-production, Exmedia ensures every image highlights product details, enhances customer trust, and drives online sales across websites, marketplaces, and social media platforms.",
-                chooseUs: ["Conversion-Focused Framing", "Consistent Catalog Styling", "Marketplace-Ready Outputs", "Brand Identity Alignment"],
-                deliverables: ["White-Background Product Shots", "Catalog-Ready Image Sets", "Platform-Optimised Assets"],
+                desc: "We delivers professional e-commerce and catalog photography that presents products with clarity, consistency, and visual appeal, enhancing customer confidence, increasing conversions, and strengthening your online brand presence",
+                chooseUs: ["E-Commerce Product Photography ", "Catalog & Lookbook Photography", "White Background & Packshot Imaging", "Product Image Optimization"],
+                deliverables: ["High-Resolution Product Image Library", "E-Commerce Ready Product Photos", "Catalog & Lookbook Photography Package", "Optimized Images for Online Marketplaces"],
                 image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Lifestyle & Contextual Imagery",
                 slug: "lifestyle-contextual-imagery",
-                desc: "That brings brands to life through authentic storytelling and real-world settings. We create visually compelling content that connects emotionally with audiences, enhances brand perception, and drives engagement. Our creative approach ensures every image reflects your brand identity while delivering impactful advertising results across platforms.",
-                chooseUs: ["Authentic Storytelling Concepts", "Real-World Setting Curation", "Emotional Brand Connection", "Platform-Optimised Lifestyle Shots"],
-                deliverables: ["Lifestyle Campaign Images", "Contextual Usage Shots", "Social-Ready Content Packs"],
+                desc: "Creates compelling lifestyle and contextual imagery that showcases products in real-world environments, strengthens emotional connections, enhances brand storytelling, and inspires customer engagement across marketing channels.",
+                chooseUs: ["Lifestyle Product Photography", "Brand Storytelling Visuals", "Environmental & Contextual Shoots", "Creative Concept & Art Direction"],
+                deliverables: ["Lifestyle Product Image Collection", "Brand Storytelling Photography", "Contextual Marketing Visuals", "Professionally Edited Creative Image Assets"],
                 image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop"
             },
             {
                 name: "Short-Form Video & Social Reels",
                 slug: "short-form-video-social-reels",
-                desc: "Perfect brand feeling Short-Form Video & Social Reels service transforms your brand into a viral-ready experience. We produce 15–30 second high-impact clips, optimized for TikTok and Instagram. By blending trending audio, cinematic transitions, and strategic hooks, we ensure your message \"stops the scroll\" and drives massive organic engagement.",
-                chooseUs: ["Viral-Ready Hook Structure", "Trending Audio Integration", "Cinematic Transitions", "TikTok & Instagram Optimization"],
-                deliverables: ["15–30s Social Reels", "Platform-Specific Edits", "Captioned Video Variants"],
+                desc: "Direct & create engaging short-form videos and social reels designed to capture attention, communicate brand stories, increase audience interaction, and drive visibility across modern digital and social platforms.",
+                chooseUs: ["Social Media Reel Production", "Creative Video Storytelling", "Trend-Based Content Creation", "Brand Engagement & Audience Growth"],
+                deliverables: ["Short-Form Promotional Videos", "Instagram Reels & Social Media Content", "Product & Brand Story Videos", "Edited Vertical Video Assets for Digital Platforms"],
                 image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1200&auto=format&fit=crop"
-            },
-            {
-                name: "360° Product Spins & Stop-Motion",
-                slug: "360-product-spins-stop-motion",
-                desc: "We delivers dynamic 360° Product Spins and engaging stop-motion visuals that elevate brand storytelling and product presentation. We create immersive, detail-focused content that captures attention, enhances customer experience, and boosts conversion rates. Our creative execution helps brands showcase products interactively, making advertising more compelling, memorable, and performance-driven across digital platforms.",
-                chooseUs: ["360° Interactive Spin Rigs", "Frame-by-Frame Stop-Motion", "Detail-Focused Macro Capture", "Immersive Digital Presentation"],
-                deliverables: ["360° Spin Video Files", "Stop-Motion GIFs & MP4s", "Interactive Embed-Ready Assets"],
-                image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop"
             }
         ],
         process: [
