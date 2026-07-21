@@ -1,11 +1,8 @@
 import HeroSlider from "@/components/home/HeroSlider";
 import ParallaxPinnedScroll from "@/components/home/ParallaxPinnedScroll";
 import AnimatedServices from "@/components/home/AnimatedServices";
-import AnimatedProcess from "@/components/home/AnimatedProcess";
-import AnimatedClients from "@/components/home/AnimatedClients";
 import AnimatedCareers from "@/components/home/AnimatedCareers";
 import AiOrb from "@/components/home/AiOrb";
-import Footer from "@/components/common/Footer";
 import { Metadata } from "next";
 
 
@@ -114,14 +111,14 @@ export default function Home() {
       {/* New Animated White Sections */}
       <AnimatedServices />
 
+
       {/* Animated Careers Section */}
       <AnimatedCareers />
 
-      {/* Animated Clients Section */}
-      <AnimatedClients />
 
       {/* AI Orb */}
       <AiOrb />
+
 
     </main>
 

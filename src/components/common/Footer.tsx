@@ -2,8 +2,18 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
-
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import {
+    FaFacebookF,
+    FaInstagram,
+    FaLinkedinIn,
+    FaYoutube,
+} from "react-icons/fa";
+import {
+    FaXTwitter,
+    FaPinterestP,
+} from "react-icons/fa6";
+import { RiThreadsFill } from "react-icons/ri";
 
 
 
@@ -14,15 +24,12 @@ const footerLinks = {
         { name: "Service", href: "/service" },
         { name: "Deliverables", href: "/deliverables" },
         { name: "About", href: "/about" },
+        { name: "Careers", href: "/careers" },
         { name: "Contact", href: "/contact" },
     ],
     legal: [
         { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Service", href: "/terms" },
-        { name: "Customer Policy Choice", href: "/customer-policy" },
-        { name: "Return and Refund Policy", href: "/refund-policy" },
-        { name: "Hacker Policy Warning", href: "/hacker-policy" },
-        { name: "Disclaimer", href: "/disclaimer" },
+        { name: "Terms & Conditions", href: "/terms" },
     ]
 };
 
@@ -31,10 +38,41 @@ const footerLinks = {
 
 // Social Links
 const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    {
+        icon: FaXTwitter,
+        href: "https://x.com/exmedia_1",
+        label: "X",
+    },
+    {
+        icon: FaInstagram,
+        href: "https://www.instagram.com/exmedia._/",
+        label: "Instagram",
+    },
+    {
+        icon: FaFacebookF,
+        href: "https://www.facebook.com/exmedia",
+        label: "Facebook",
+    },
+    {
+        icon: FaLinkedinIn,
+        href: "https://www.linkedin.com/company/exmedia1/posts/?feedView=all",
+        label: "LinkedIn",
+    },
+    {
+        icon: FaYoutube,
+        href: "https://www.youtube.com/channel/UC4tqUCDI3l10SZMwNlR1l9w",
+        label: "YouTube",
+    },
+    {
+        icon: FaPinterestP,
+        href: "https://in.pinterest.com/exmedia",
+        label: "Pinterest",
+    },
+    {
+        icon: RiThreadsFill,
+        href: "https://www.threads.com/@exmedia._",
+        label: "Threads",
+    },
 ];
 
 
@@ -129,7 +167,7 @@ export default function Footer() {
                                 );
                             })}
                         </div>
-                        
+
                     </motion.div>
 
 
@@ -253,8 +291,7 @@ export default function Footer() {
                                 <div>
                                     <p className="text-xs text-gray-500 uppercase tracking-wider mb-1 font-semibold">Visit Us</p>
                                     <p className="text-gray-300 group-hover:text-white transition-colors leading-relaxed text-sm">
-                                        123 Innovation Drive,<br />
-                                        Tech District, NY 10001
+                                        KERALA – UAE
                                     </p>
                                 </div>
 
@@ -279,7 +316,7 @@ export default function Footer() {
                         &copy; {currentYear} Exmedia. All rights reserved.
                     </p>
                 </motion.div>
-                
+
             </div>
         </footer>
     );

@@ -1,8 +1,6 @@
-import FloatingLines from "@/components/FloatingLines";
 import Ballpit from "@/components/Ballpit";
 import Threads from "@/components/Threads";
 import ColorBends from "@/components/ColorBends";
-import SideRays from "@/components/SideRays";
 import SoftAurora from "@/components/SoftAurora";
 import ServiceCategoryHub from "@/components/service/ServiceCategoryHub";
 import { Metadata } from "next";
@@ -14,11 +12,6 @@ const heroComponents: Record<string, React.ReactNode> = {
     "branding": (
         <div className="absolute inset-0 bg-black opacity-80">
             <ColorBends />
-        </div>
-    ),
-    "technology": (
-        <div className="absolute inset-0 bg-black opacity-80">
-            <FloatingLines />
         </div>
     ),
     "experience-design": (
@@ -33,11 +26,6 @@ const heroComponents: Record<string, React.ReactNode> = {
                 lightIntensity={200}
                 ambientIntensity={1}
             />
-        </div>
-    ),
-    "digital-marketing": (
-        <div className="absolute inset-0 z-0 bg-black">
-            <Threads />
         </div>
     ),
     "content-production": (
@@ -56,6 +44,11 @@ const heroComponents: Record<string, React.ReactNode> = {
                 layerOffset={0}
                 colorSpeed={1.5}
             />
+        </div>
+    ),
+    "digital-marketing": (
+        <div className="absolute inset-0 z-0 bg-black">
+            <Threads />
         </div>
     )
 };

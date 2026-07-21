@@ -9,9 +9,8 @@ import { servicesData } from "@/lib/servicesData";
 const categoryVideos: Record<string, string> = {
     "branding": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
     "experience-design": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
-    "technology": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
-    "digital-marketing": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
     "content-production": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
+    "digital-marketing": "https://admin.wac.co/uploads/expirence_10_1d7ae97828.mp4",
 };
 
 // Interactive Service Categories Sub-component

@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Zap, Target, Palette, Code2 } from "lucide-react";
+import { ArrowUpRight, Palette,Megaphone, Clapperboard, Lightbulb } from "lucide-react";
 
 
 
@@ -10,24 +10,24 @@ import { ArrowUpRight, Zap, Target, Palette, Code2 } from "lucide-react";
 // Services Data
 const services = [
     {
+        icon: <Lightbulb strokeWidth={1.5} />,
+        title: "Branding & Visibility",
+        description: "We craft brand identities that go beyond a logo — building the story, voice, and personality that make businesses unforgettable. From strategy to visual identity, we help brands connect authentically with their audience, standing out with clarity, consistency, and purpose in every touchpoint they create.",
+    },
+    {
         icon: <Palette strokeWidth={1.5} />,
-        title: "Brand Identity",
-        description: "Crafting memorable, timeless brand identities that resonate deeply with your core audience and stand out in crowded markets.",
+        title: "Design & Creativity",
+        description: "Our design team transforms ideas into striking visuals that capture attention and communicate purpose. From concept to execution, we blend creativity with strategy — delivering designs that aren't just beautiful, but purposeful, memorable, and built to elevate your brand across every platform and medium.",
     },
     {
-        icon: <Code2 strokeWidth={1.5} />,
-        title: "Digital Ecosystems",
-        description: "Engineering robust, scalable web and mobile applications focused on fluid user experiences and cutting-edge performance.",
+        icon: <Clapperboard  strokeWidth={1.5} />,
+        title: "Photography & Videography",
+        description: "We capture moments that tell your brand's story with cinematic precision. Through creative photography and dynamic videography, we produce visual content that engages audiences, builds emotional connection, and showcases your brand authentically — turning everyday visuals into powerful storytelling tools that leave lasting impressions.",
     },
     {
-        icon: <Target strokeWidth={1.5} />,
-        title: "Strategic Marketing",
-        description: "Data-driven campaigns designed to maximize ROI, amplify reach, and convert passive scrollers into loyal brand advocates.",
-    },
-    {
-        icon: <Zap strokeWidth={1.5} />,
-        title: "AI Integration",
-        description: "Leveraging state-of-the-art artificial intelligence to automate workflows, personalize experiences, and hyper-scale operations.",
+        icon: <Megaphone strokeWidth={1.5} />,
+        title: "Digital Marketing",
+        description: "We drive growth through data-backed digital marketing strategies tailored to your brand's goals. From social media and SEO to paid campaigns and content strategy, we help businesses reach the right audience, boost engagement, and convert visibility into measurable, lasting business results",
     },
 ];
 
@@ -72,13 +72,13 @@ export default function AnimatedServices() {
     return (
 
 
-        <section ref={sectionRef} className="w-full bg-white text-black py-14 md:py-10 px-4 md:px-12 lg:px-24 overflow-hidden relative">
+        <section ref={sectionRef} className="w-full bg-white text-black py-14 md:py-10 px-4 md:px-12 lg:px-16 overflow-hidden relative">
 
 
             <div className="w-full mx-auto">
 
 
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-20">
 
 
                     <motion.div

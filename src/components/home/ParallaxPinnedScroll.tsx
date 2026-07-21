@@ -97,7 +97,7 @@ export default function ParallaxPinnedScroll() {
 const IntroText = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
 
 
-    const text = "We believe in a world where technology fosters your everyday experiences. And our mission is to make it happen!";
+    const text = "Your brand isn't what you say it is.It's what we help the world feel it is.";
     const words = text.split(" ");
     const totalChars = text.replace(/\s+/g, "").length;
     let charIndex = 0;

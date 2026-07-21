@@ -95,7 +95,6 @@ export default function AnimatedCareers() {
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                        className="mb-8"
                     >
 
                         <span className="inline-flex items-center gap-3 mb-6">
@@ -105,8 +104,8 @@ export default function AnimatedCareers() {
 
 
                         <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif font-medium tracking-tight mb-8 leading-[1.1] text-white">
-                            Build the <span className="italic text-gray-400">future</span> <br />
-                            with us.
+                            We Help You With Brand Positioning <br />
+                            & Empower the Business
                         </h2>
 
                     </motion.div>
@@ -120,7 +119,10 @@ export default function AnimatedCareers() {
                         className="text-lg md:text-xl text-gray-400 leading-relaxed mb-10 max-w-xl"
                     >
 
-                        We are a collective of visionaries, engineers, and creatives pushing the boundaries of what&apos;s possible. If you&apos;re passionate about crafting extraordinary digital experiences, your best work is waiting for you here.
+                        !!Unlock untapped potential and accelerate business
+                        with tailored strategies. Dominate the market
+                        and leave competitors in the dust !!
+
 
                     </motion.p>
 
@@ -135,17 +137,12 @@ export default function AnimatedCareers() {
 
                         <button className="group relative inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-full font-semibold overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
 
-                            <span className="relative z-10">View Open Positions</span>
+                            <span className="relative z-10">Consult Now!</span>
 
                             <ArrowUpRight className="w-5 h-5 relative z-10 group-hover:rotate-45 transition-transform duration-300" />
 
                             <div className="absolute inset-0 bg-gray-200 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
 
-                        </button>
-
-
-                        <button className="inline-flex items-center justify-center gap-3 bg-white/5 border border-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold transition-colors duration-300 hover:bg-white/10 hover:border-white/20">
-                            Our Culture
                         </button>
 
                     </motion.div>

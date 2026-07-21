@@ -21,7 +21,7 @@ export default function ServiceOverviewPage() {
 
 
             {/* Stunning Premium Hero */}
-            <HeroBanner title="Our Services" desc="A multi-disciplinary approach combining striking design, cutting-edge technology." heroComponent={<LightPillar
+            <HeroBanner title="Our Services" desc="A multi-disciplinary approach combining striking design, strategic marketing, and visual production." heroComponent={<LightPillar
                 topColor="#5227FF"
                 bottomColor="#FF9FFC"
                 intensity={1}

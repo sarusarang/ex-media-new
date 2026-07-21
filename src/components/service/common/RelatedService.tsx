@@ -51,7 +51,7 @@ export default function RelatedService({ category }: { category: any }) {
 
                     {[
                         { name: "Brand Strategy", href: "/service/branding#brand-consulting", desc: "Structuring complex brand identity portfolios into cohesive systems." },
-                        { name: "E-Commerce Platforms", href: "/service/technology#ecommerce", desc: "Bespoke digital storefronts and payment checkouts built to scale." },
+                        { name: "Photography & Reel Shoots", href: "/service/content-production#product-photography-videography", desc: "Commercial product photography and cinematic video production." },
                         { name: "UI/UX Design", href: "/service/experience-design#ui-ux-design", desc: "Holistic, customer-centric interface workflows designed for engagement." }
 
                     ].map((related, idx) => (

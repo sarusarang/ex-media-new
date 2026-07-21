@@ -32,7 +32,7 @@ export default function Header() {
     };
 
 
-    const isHome = pathname === "/" || pathname?.startsWith("/service") || pathname === "/deliverables" || pathname === "/about";
+    const isHome = pathname === "/" || pathname?.startsWith("/service") || pathname === "/deliverables" || pathname === "/about" || pathname === "/terms" || pathname === "/privacy" || pathname === "/careers" || pathname === "/contact";
 
 
     useEffect(() => {

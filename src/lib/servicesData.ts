@@ -207,105 +207,79 @@ export const servicesData: Record<string, CategoryData> = {
             }
         ]
     },
-    "technology": {
-        title: "Technology",
-        slug: "technology",
-        desc: "Engineering robust, scalable software solutions built on the bleeding edge of modern tech.",
+    "content-production": {
+        title: "Photography & Videography",
+        slug: "content-production",
+        desc: "Transforming your offerings into high-conversion visual masterpieces through 4K cinematography, precision styling, and immersive storytelling.",
         subServices: [
             {
-                name: "AI & Machine Learning",
-                slug: "ai-ml",
-                desc: "Integrating predictive models, generative AI APIs, and automation into your platform architecture.",
-                chooseUs: ["Custom Model Fine-tuning", "Vector Database Setup", "Optimized Inference Speed", "Automated Decision Pipelines"],
-                deliverables: ["Predictive Analytics APIs", "LLM Integration Middleware", "Model Training Architecture"],
-                image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?q=80&w=1200&auto=format&fit=crop"
+                name: "Product Photography & Videography",
+                slug: "product-photography-videography",
+                desc: "Attend Premium product photography and cinematic videography that showcase quality, highlight unique features, enhance brand appeal, and increase customer engagement across e-commerce, advertising, and digital platforms.",
+                chooseUs: ["Commercial Product Photography", "Product Promotional Videography", "E-commerce & Catalogue Shoots", "Lifestyle & Brand Visual Production"],
+                deliverables: ["High-Resolution Product Images", "Product Promotional & Commercial Videos", "E-commerce Catalogue Visuals", "Professionally Edited Photo & Video Assets"],
+                image: "https://images.unsplash.com/photo-1452697620382-f6543ead73b5?q=80&w=1200&auto=format&fit=crop"
             },
             {
-                name: "DevOps Consulting",
-                slug: "devops",
-                desc: "Automating deployment pipelines, containerization, and monitoring networks for zero downtime.",
-                chooseUs: ["Infrastructure as Code (IaC)", "Secure CI/CD Pipelines", "Container Orchestration (K8s)", "Real-time Alert Monitors"],
-                deliverables: ["Terraform Setup Scripts", "CI/CD Pipeline Configurations", "Cluster Monitoring Dashboards"],
-                image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop"
+                name: "E-Commerce & Catalog Photography",
+                slug: "ecommerce-catalog-photography",
+                desc: "We delivers professional e-commerce and catalog photography that presents products with clarity, consistency, and visual appeal, enhancing customer confidence, increasing conversions, and strengthening your online brand presence",
+                chooseUs: ["E-Commerce Product Photography ", "Catalog & Lookbook Photography", "White Background & Packshot Imaging", "Product Image Optimization"],
+                deliverables: ["High-Resolution Product Image Library", "E-Commerce Ready Product Photos", "Catalog & Lookbook Photography Package", "Optimized Images for Online Marketplaces"],
+                image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
             },
             {
-                name: "Data & Analytics",
-                slug: "data-analytics",
-                desc: "Building scalable data pipelines and warehousing setups to extract business intelligence.",
-                chooseUs: ["Real-time Stream Pipelines", "Scalable Warehouse Schema", "ETL Process Optimization", "Compliant Privacy Protocols"],
-                deliverables: ["Data Warehouse Schemas", "ETL Pipeline Scripts", "BI Reporting Integration Docs"],
-                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+                name: "Lifestyle & Contextual Imagery",
+                slug: "lifestyle-contextual-imagery",
+                desc: "Creates compelling lifestyle and contextual imagery that showcases products in real-world environments, strengthens emotional connections, enhances brand storytelling, and inspires customer engagement across marketing channels.",
+                chooseUs: ["Lifestyle Product Photography", "Brand Storytelling Visuals", "Environmental & Contextual Shoots", "Creative Concept & Art Direction"],
+                deliverables: ["Lifestyle Product Image Collection", "Brand Storytelling Photography", "Contextual Marketing Visuals", "Professionally Edited Creative Image Assets"],
+                image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop"
             },
             {
-                name: "Web Development",
-                slug: "web-development",
-                desc: "Developing fast, responsive web systems using Next.js, React, and modular serverless backends.",
-                chooseUs: ["Server-Side Rendering (SSR)", "Lighthouse Core Web Vitals", "API-first Architecture", "State Management Rigor"],
-                deliverables: ["Clean React/Next.js Codebase", "Headless CMS Integrations", "REST/GraphQL API Docs"],
-                image: "https://images.unsplash.com/photo-1547658719-da2b8116c1d0?q=80&w=1200&auto=format&fit=crop"
-            },
-            {
-                name: "Mobile App Development",
-                slug: "mobile-app",
-                desc: "Building high-performance native iOS/Android or cross-platform mobile apps.",
-                chooseUs: ["Native Interface Speed", "Offline Data Sync Support", "App Store Compliance Guard", "Modular Feature Extensions"],
-                deliverables: ["Native App Build Files", "App Store Submission Packages", "API Synchronization Layer"],
-                image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
-            },
-            {
-                name: "E-commerce",
-                slug: "ecommerce",
-                desc: "Constructing scalable Shopify, WooCommerce, or bespoke headless e-commerce frameworks.",
-                chooseUs: ["High-traffic Checkout Security", "Multi-payment Gateway Bind", "Inventory Sync Systems", "High Core Vitals SEO Performance"],
-                deliverables: ["Digital Storefront Setup", "Custom Checkout Extension", "CMS Product Manager Suite"],
-                image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-            },
-            {
-                name: "Quality Assurance & Testing",
-                slug: "qa-testing",
-                desc: "Employing exhaustive automated and manual testing methodologies to protect your release.",
-                chooseUs: ["High Automated Code Coverage", "Comprehensive E2E Tests", "Cross-browser Support Check", "Vulnerability Pentesting"],
-                deliverables: ["Automated Test Scripts", "Detailed QA Audit Reports", "Performance Test Benchmarks"],
-                image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop"
-            },
-            {
-                name: "Cloud Services",
-                slug: "cloud-services",
-                desc: "Architecting cloud migrations, auto-scaling environments, and serverless backends.",
-                chooseUs: ["Multi-region Redundancy", "Optimized Billing Control", "Zero-downtime Deployments", "Auto-scaling Threshold Setup"],
-                deliverables: ["Cloud Architecture Diagrams", "Provisioning Setup Scripts", "Backup/Recovery Policy Protocols"],
-                image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
-            },
-            {
-                name: "Cyber Security",
-                slug: "cyber-security",
-                desc: "Securing network access controls, conducting code penetration, and setting up encryption layers.",
-                chooseUs: ["Advanced Threat Mitigation", "Penetration Testing Rigor", "Data Encryption at Rest", "Regulatory Compliance Guard"],
-                deliverables: ["Security Penetration Reports", "Access Policy Definitions", "Incident Action Plan Setup"],
-                image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop"
+                name: "Short-Form Video & Social Reels",
+                slug: "short-form-video-social-reels",
+                desc: "Direct & create engaging short-form videos and social reels designed to capture attention, communicate brand stories, increase audience interaction, and drive visibility across modern digital and social platforms.",
+                chooseUs: ["Social Media Reel Production", "Creative Video Storytelling", "Trend-Based Content Creation", "Brand Engagement & Audience Growth"],
+                deliverables: ["Short-Form Promotional Videos", "Instagram Reels & Social Media Content", "Product & Brand Story Videos", "Edited Vertical Video Assets for Digital Platforms"],
+                image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1200&auto=format&fit=crop"
             }
         ],
         process: [
             {
                 step: "01",
-                title: "Architecture Planning",
-                desc: "We analyze technical dependencies and design robust database schemas, class relationships, and network scaling rules prior to building.",
-                details: "Database Schemas | Network Planning | Tech Stack Selection",
-                image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1000&auto=format&fit=crop"
+                title: "Pre-Production & Concept Styling",
+                desc: "Before the first flash fires, we define the visual mood. This involves creating a \"Shot List\" and selecting props, backgrounds, and lighting styles. Whether it's a \"clean clinical\" look for e-commerce or a \"warm lifestyle\" setting for social media, we align every detail with your brand's strategic identity.",
+                details: "Shot List Creation | Prop Selection | Lighting Style Definition",
+                image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1000&auto=format&fit=crop"
             },
             {
                 step: "02",
-                title: "Sprint Development",
-                desc: "Our engineering squad develops logic blocks in modular sprints, committing code with comprehensive automated tests.",
-                details: "Modular Coding | CI/CD Integration | Unit Testing",
-                image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop"
+                title: "Set Construction & Lighting Design",
+                desc: "Our studio team builds the environment. We use advanced 3-point lighting to highlight product textures, eliminate unwanted reflections, and create depth. For videography, we set up motorized sliders or gimbals to ensure smooth, cinematic movement that adds a high-end feel to the footage.",
+                details: "3-Point Lighting Setup | Gimbal & Slider Rigs | Texture Highlighting",
+                image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1000&auto=format&fit=crop"
             },
             {
                 step: "03",
-                title: "Launch & Monitoring",
-                desc: "We migrate server code to cloud environments and monitor system uptime and error logs for smooth operational scaling.",
-                details: "Server Migration | Live Log Auditing | Scaling Rule Triggers",
-                image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop"
+                title: "The Production Phase",
+                desc: "This is where the vision comes to life. Our photographers and cinematographers capture high-resolution 4K RAW files. We focus on multiple angles—hero shots, macro-details (close-ups), and functional use cases. For videos, we capture \"hooks\" and \"transitions\" specifically designed for fast-paced digital platforms.",
+                details: "4K RAW Capture | Multi-Angle Hero Shots | Digital-Platform Hooks",
+                image: "https://images.unsplash.com/photo-1452697620382-f6543ead73b5?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                step: "04",
+                title: "Post-Production & Digital Retouching",
+                desc: "Raw files are transformed into polished assets. Our editors perform color grading, skin/surface retouching, and background removal. For video, we sync the visuals with trending audio or professional voiceovers, adding motion graphics and text overlays to reinforce your key selling points.",
+                details: "Color Grading | Background Removal | Motion Graphics Overlays",
+                image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                step: "05",
+                title: "Final Review & Format Optimization",
+                desc: "We conduct a final quality check to ensure color accuracy across all screens. The assets are then rendered into optimized formats: high-res TIFFs/JPEGs for print, and lightweight MP4s/WebPs for web and social media, ensuring your brand looks perfect wherever it appears.",
+                details: "Color Accuracy QC | TIFF/JPEG Print Export | MP4/WebP Digital Handoff",
+                image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1000&auto=format&fit=crop"
             }
         ]
     },
@@ -384,82 +358,6 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "We analyze ROI performance, dynamically shift ad spending, and run conversion rate testing for continuous scaling.",
                 details: "ROAS Calculations | Budget Optimization | A/B Experiments",
                 image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1000&auto=format&fit=crop"
-            }
-        ]
-    },
-    "content-production": {
-        title: "Photography & Videography",
-        slug: "content-production",
-        desc: "Transforming your offerings into high-conversion visual masterpieces through 4K cinematography, precision styling, and immersive storytelling.",
-        subServices: [
-            {
-                name: "Product Photography & Videography",
-                slug: "product-photography-videography",
-                desc: "Attend Premium product photography and cinematic videography that showcase quality, highlight unique features, enhance brand appeal, and increase customer engagement across e-commerce, advertising, and digital platforms.",
-                chooseUs: ["Commercial Product Photography", "Product Promotional Videography", "E-commerce & Catalogue Shoots", "Lifestyle & Brand Visual Production"],
-                deliverables: ["High-Resolution Product Images", "Product Promotional & Commercial Videos", "E-commerce Catalogue Visuals", "Professionally Edited Photo & Video Assets"],
-                image: "https://images.unsplash.com/photo-1452697620382-f6543ead73b5?q=80&w=1200&auto=format&fit=crop"
-            },
-            {
-                name: "E-Commerce & Catalog Photography",
-                slug: "ecommerce-catalog-photography",
-                desc: "We delivers professional e-commerce and catalog photography that presents products with clarity, consistency, and visual appeal, enhancing customer confidence, increasing conversions, and strengthening your online brand presence",
-                chooseUs: ["E-Commerce Product Photography ", "Catalog & Lookbook Photography", "White Background & Packshot Imaging", "Product Image Optimization"],
-                deliverables: ["High-Resolution Product Image Library", "E-Commerce Ready Product Photos", "Catalog & Lookbook Photography Package", "Optimized Images for Online Marketplaces"],
-                image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop"
-            },
-            {
-                name: "Lifestyle & Contextual Imagery",
-                slug: "lifestyle-contextual-imagery",
-                desc: "Creates compelling lifestyle and contextual imagery that showcases products in real-world environments, strengthens emotional connections, enhances brand storytelling, and inspires customer engagement across marketing channels.",
-                chooseUs: ["Lifestyle Product Photography", "Brand Storytelling Visuals", "Environmental & Contextual Shoots", "Creative Concept & Art Direction"],
-                deliverables: ["Lifestyle Product Image Collection", "Brand Storytelling Photography", "Contextual Marketing Visuals", "Professionally Edited Creative Image Assets"],
-                image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1200&auto=format&fit=crop"
-            },
-            {
-                name: "Short-Form Video & Social Reels",
-                slug: "short-form-video-social-reels",
-                desc: "Direct & create engaging short-form videos and social reels designed to capture attention, communicate brand stories, increase audience interaction, and drive visibility across modern digital and social platforms.",
-                chooseUs: ["Social Media Reel Production", "Creative Video Storytelling", "Trend-Based Content Creation", "Brand Engagement & Audience Growth"],
-                deliverables: ["Short-Form Promotional Videos", "Instagram Reels & Social Media Content", "Product & Brand Story Videos", "Edited Vertical Video Assets for Digital Platforms"],
-                image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1200&auto=format&fit=crop"
-            }
-        ],
-        process: [
-            {
-                step: "01",
-                title: "Pre-Production & Concept Styling",
-                desc: "Before the first flash fires, we define the visual mood. This involves creating a \"Shot List\" and selecting props, backgrounds, and lighting styles. Whether it's a \"clean clinical\" look for e-commerce or a \"warm lifestyle\" setting for social media, we align every detail with your brand's strategic identity.",
-                details: "Shot List Creation | Prop Selection | Lighting Style Definition",
-                image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1000&auto=format&fit=crop"
-            },
-            {
-                step: "02",
-                title: "Set Construction & Lighting Design",
-                desc: "Our studio team builds the environment. We use advanced 3-point lighting to highlight product textures, eliminate unwanted reflections, and create depth. For videography, we set up motorized sliders or gimbals to ensure smooth, cinematic movement that adds a high-end feel to the footage.",
-                details: "3-Point Lighting Setup | Gimbal & Slider Rigs | Texture Highlighting",
-                image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1000&auto=format&fit=crop"
-            },
-            {
-                step: "03",
-                title: "The Production Phase",
-                desc: "This is where the vision comes to life. Our photographers and cinematographers capture high-resolution 4K RAW files. We focus on multiple angles—hero shots, macro-details (close-ups), and functional use cases. For videos, we capture \"hooks\" and \"transitions\" specifically designed for fast-paced digital platforms.",
-                details: "4K RAW Capture | Multi-Angle Hero Shots | Digital-Platform Hooks",
-                image: "https://images.unsplash.com/photo-1452697620382-f6543ead73b5?q=80&w=1000&auto=format&fit=crop"
-            },
-            {
-                step: "04",
-                title: "Post-Production & Digital Retouching",
-                desc: "Raw files are transformed into polished assets. Our editors perform color grading, skin/surface retouching, and background removal. For video, we sync the visuals with trending audio or professional voiceovers, adding motion graphics and text overlays to reinforce your key selling points.",
-                details: "Color Grading | Background Removal | Motion Graphics Overlays",
-                image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1000&auto=format&fit=crop"
-            },
-            {
-                step: "05",
-                title: "Final Review & Format Optimization",
-                desc: "We conduct a final quality check to ensure color accuracy across all screens. The assets are then rendered into optimized formats: high-res TIFFs/JPEGs for print, and lightweight MP4s/WebPs for web and social media, ensuring your brand looks perfect wherever it appears.",
-                details: "Color Accuracy QC | TIFF/JPEG Print Export | MP4/WebP Digital Handoff",
-                image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1000&auto=format&fit=crop"
             }
         ]
     }

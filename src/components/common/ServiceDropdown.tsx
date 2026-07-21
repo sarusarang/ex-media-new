@@ -29,7 +29,7 @@ export const DesktopServiceDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onI
                     onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}
                     className="absolute left-0 top-full w-full bg-[#0a0a0a] text-white overflow-hidden shadow-2xl border-t border-gray-800"
-                    style={{ minHeight: '400px' }}
+                    style={{ minHeight: '440px' }}
                 >
                     {/* Butter smooth animated blue glow on the right */}
                     <motion.div
@@ -39,7 +39,7 @@ export const DesktopServiceDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onI
                         className="absolute top-0 right-0 w-1/2 lg:w-1/3 h-full origin-top bg-linear-to-l from-blue-600/20 via-blue-900/10 to-transparent pointer-events-none"
                     />
 
-                    <div className="container mx-auto px-4 lg:px-12 py-14 relative z-10 flex flex-col lg:flex-row gap-10">
+                    <div className="container mx-auto px-4 lg:px-12 py-10 relative z-10 flex flex-col lg:flex-row gap-10">
                         {/* Left Side: Capabilities Header */}
                         <div className="w-full lg:w-[220px] shrink-0 flex flex-col justify-between pr-8 lg:border-r lg:border-white/10">
                             <div>
@@ -59,7 +59,7 @@ export const DesktopServiceDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onI
                         </div>
 
                         {/* Right Side: Columns */}
-                        <div className="flex-1 grid grid-cols-2 md:grid-cols-5 gap-x-8 gap-y-10 pl-2">
+                        <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 pl-2">
                             {serviceCategories.map((category, idx) => (
                                 <motion.div
                                     key={category.title}
@@ -69,18 +69,18 @@ export const DesktopServiceDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onI
                                     className="flex flex-col"
                                 >
                                     <Link onClick={onItemClick} href={`/service/${category.slug}`}>
-                                        <h3 className="text-[11px] font-bold tracking-wider uppercase mb-4 flex items-center gap-1.5 text-white group cursor-pointer hover:text-[#D32F2F] transition-colors">
+                                        <h3 className="text-[11px] font-bold tracking-wider uppercase mb-3 flex items-center gap-1.5 text-white group cursor-pointer hover:text-[#D32F2F] transition-colors whitespace-nowrap">
                                             {category.title}
                                             <ArrowUpRight className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-all" />
                                         </h3>
                                     </Link>
-                                    <ul className="space-y-3">
+                                    <ul className="space-y-2.5">
                                         {category.items.map((item) => (
                                             <li key={item.name}>
                                                 <Link
                                                     onClick={onItemClick}
                                                     href={item.href}
-                                                    className="text-gray-400 text-[13px] leading-snug hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
+                                                    className="text-gray-400 text-sm leading-snug hover:text-white hover:translate-x-1 inline-block transition-all duration-300"
                                                 >
                                                     {item.name}
                                                 </Link>

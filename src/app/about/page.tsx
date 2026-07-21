@@ -12,8 +12,10 @@ import {
 import Link from "next/link";
 import LightRays from "@/components/LightRays";
 
-/* ─── Data ───────────────────────────────────────────────────────────── */
 
+
+
+/* ─── Data ───────────────────────────────────────────────────────────── */
 const team = [
     {
         name: "Marcus Elwood", role: "CEO & Founder",
@@ -41,26 +43,33 @@ const team = [
     },
 ];
 
+
+
 const values = [
-    { icon: Target,    color: "#D32F2F", num: "01", title: "Precision Over Volume",   desc: "We take fewer clients intentionally — every project gets undivided senior-level attention from kickoff to final delivery." },
-    { icon: Lightbulb, color: "#7B1FA2", num: "02", title: "Innovation by Default",   desc: "We never reuse templates. Every solution is engineered from a blank canvas, purpose-built for your brand and market." },
-    { icon: Shield,    color: "#1565C0", num: "03", title: "Uncompromising Quality",  desc: "No file ships without passing our strict internal audit: performance, accessibility, brand fidelity, and technical correctness." },
-    { icon: Heart,     color: "#2E7D32", num: "04", title: "Long-Term Partnership",   desc: "We think in years, not projects. Relationships built on transparency, honest feedback, and measurable business growth." },
+    { icon: Target, color: "#D32F2F", num: "01", title: "Creativity with Purpose", desc: "Every creative asset is built to perform, not just to impress." },
+    { icon: Lightbulb, color: "#7B1FA2", num: "02", title: "AI-Driven Innovation", desc: "We integrate the latest AI tools into our creative process to keep every campaign current and ahead of trends." },
+    { icon: Shield, color: "#1565C0", num: "03", title: "Strategic Execution", desc: "Advanced marketing strategies designed around each client's goals and audience." },
+    { icon: Heart, color: "#2E7D32", num: "04", title: "Full-Service Management", desc: "We manage your online media and promotions, so your brand stays active, visible, and consistent." },
 ];
+
+
 
 const stats = [
-    { endVal: 200, suffix: "+", label: "Projects Delivered", icon: CheckCircle2 },
-    { endVal: 98,  suffix: "%", label: "Client Retention",   icon: Star },
-    { endVal: 14,  suffix: "+", label: "Countries Served",   icon: Globe },
-    { endVal: 8,   suffix: "",  label: "Years of Excellence",icon: Award },
+    { endVal: 2400, suffix: "+", label: "Projects Delivered", icon: CheckCircle2 },
+    { endVal: 98, suffix: "%", label: "Client Retention", icon: Star },
+    { endVal: 20, suffix: "", label: "Years of Excellence", icon: Award },
 ];
 
+
+
 const capabilities = [
-    { icon: Palette, label: "Branding & Identity" },
-    { icon: Code2,   label: "Web & Engineering" },
-    { icon: Film,    label: "Cinematography" },
-    { icon: Zap,     label: "Growth Strategy" },
+    { icon: Palette, label: "Branding & Advertisement" },
+    { icon: Code2, label: "AI-Powered Creatives" },
+    { icon: Film, label: "Marketing Strategy" },
+    { icon: Zap, label: "Online Media Management" },
 ];
+
+
 
 const faqs = [
     { q: "What is your project turnaround time?", a: "Turnaround times vary by scope. Small deliverables and branding packages typically complete in 2-3 weeks, while enterprise Next.js codebases or custom video productions take between 6-8 weeks." },
@@ -68,6 +77,8 @@ const faqs = [
     { q: "How do you handle post-launch support?", a: "We provide dedicated post-launch support for 30 days to check responsiveness and performance metrics. Additional maintenance retainers can be arranged for ongoing platform scaling." },
     { q: "What is your design & development process?", a: "We follow a 4-stage pipeline: Strategy & Specs, Prototyping & Drafts, Refinement & Code, and QA & File Transfer. You will receive active updates via shared Figma links and dev channels." }
 ];
+
+
 
 const galleryItems = [
     { title: "Design Studio", category: "UX/UI Research", image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=800&auto=format&fit=crop" },
@@ -77,6 +88,10 @@ const galleryItems = [
     { title: "Visual Laboratory", category: "VFX & Assets", image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop" },
     { title: "Deploy Center", category: "Next.js & Performance", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" }
 ];
+
+
+
+
 
 /* ─── Helpers ─────────────────────────────────────────────────────────── */
 function FadeUp({ children, delay = 0, className = "" }: {
@@ -94,6 +109,11 @@ function FadeUp({ children, delay = 0, className = "" }: {
         </motion.div>
     );
 }
+
+
+
+
+
 
 function CountUp({ end, duration = 1500, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
     const [count, setCount] = useState(0);
@@ -117,15 +137,25 @@ function CountUp({ end, duration = 1500, suffix = "" }: { end: number; duration?
     return <span ref={ref}>{count}{suffix}</span>;
 }
 
+
+
+
+
 /* ─── Page ────────────────────────────────────────────────────────────── */
 export default function AboutPage() {
-    const heroRef  = useRef(null);
+
+
+    const heroRef = useRef(null);
     const heroView = useInView(heroRef, { margin: "200px 0px 200px 0px" });
     const [openFaq, setOpenFaq] = useState<number | null>(null);
     const [selectedItem, setSelectedItem] = useState<(typeof galleryItems)[number] | null>(null);
 
+
     return (
+
+
         <main className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
+
 
             {/* ══════════════════════════════════
                 §1  HERO — transparent, full-bleed LightRays (EXCLUDED from redesign)
@@ -171,16 +201,15 @@ export default function AboutPage() {
                         initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.08 }}
                         className="text-[clamp(3rem,9vw,7.5rem)] font-serif font-medium tracking-tight text-white leading-[1.04] mb-6"
                     >
-                        We Build Brands<br />
-                        <em className="text-gray-400 not-italic italic">That Last.</em>
+                        We Build Brands <br />
+                        <em className="text-gray-400 not-italic italic">That Endure</em>
                     </motion.h1>
 
                     <motion.p
                         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.22 }}
                         className="text-gray-400 text-base sm:text-lg md:text-xl max-w-xl font-light leading-relaxed mb-10"
                     >
-                        A premium digital production studio — engineering the identities,
-                        interfaces, and systems that ambitious companies rely on to grow.
+                        A full-service branding and advertisement studio — delivering creative, strategy, and technology together to help ambitious businesses grow
                     </motion.p>
 
                     <motion.div
@@ -201,6 +230,9 @@ export default function AboutPage() {
                 </div>
             </section>
 
+
+
+
             {/* ══════════════════════════════════
                 §2  OUR STORY & VISION — Warm Cream BG (BIGGER WIDTH)
             ══════════════════════════════════ */}
@@ -212,14 +244,14 @@ export default function AboutPage() {
                                 <TrendingUp className="w-3.5 h-3.5 text-[#D32F2F]" /> Origin / Section 01
                             </span>
                             <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-black leading-[1.08] tracking-tight">
-                                Crafting visual systems <br/>
-                                <span className="italic text-gray-500">with absolute intent.</span>
+                               Crafting brands with  <br />
+                                <span className="italic text-gray-500">precision since 2006</span>
                             </h2>
                             <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-light">
-                                EX Media was established in 2016 to bridge the gap between creative artistry and software engineering. We believe visual design shouldn&apos;t just look premium — it must perform flawlessly.
+                                Exmedia was established in 2006 to bridge the gap between creative artistry and advertising strategy. We believe branding shouldn't just look compelling — it must perform.
                             </p>
                             <p className="text-gray-600 text-base md:text-lg leading-relaxed font-light">
-                                As an intentionally compact and highly specialized team, we reject assembly-line production. Every codebase is written from scratch, every frame is graded individually, and every brand asset is hand-refined to guarantee absolute distinction.
+                                As a dedicated team of creative and strategic specialists, we deliver the latest AI-integrated creatives, execute advanced marketing strategies tailored to each client, and manage our clients' online media and promotion programs end-to-end — ensuring every brand we touch stays current, consistent, and competitive.
                             </p>
                             <div className="flex flex-wrap gap-3 pt-3">
                                 {capabilities.map((c, i) => (
@@ -247,12 +279,15 @@ export default function AboutPage() {
                 </div>
             </section>
 
+
+
+
             {/* ══════════════════════════════════
                 §3  METRICS & PROOF — Sleek Dark BG (LARGER METRICS & COUNT-UP ANIMATION)
             ══════════════════════════════════ */}
             <section className="bg-[#0B0B0B] py-12 md:py-14 border-b border-white/[0.05]">
                 <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-20">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
                         {stats.map((s, i) => (
                             <FadeUp key={i} delay={i * 0.08} className="flex flex-col items-center text-center gap-2 p-10 bg-white/[0.02] border border-white/[0.04] rounded-3xl hover:border-white/[0.08] transition-colors w-full">
                                 <s.icon className="w-5 h-5 text-[#D32F2F] mb-1" />
@@ -265,6 +300,9 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+
+
 
             {/* ══════════════════════════════════
                 §4  LEADERSHIP — Soft Light Grey BG (WHITE & NICE CARDS, NO GLOW)
@@ -305,6 +343,9 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+
+
 
             {/* ══════════════════════════════════
                 §5  STUDIO & PROCESS GALLERY — Asymmetric 1-big + 5-small with Lightbox
@@ -357,6 +398,9 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+
+
 
             {/* ══════════════════════════════════
                 LIGHTBOX MODAL
@@ -412,6 +456,10 @@ export default function AboutPage() {
                 )}
             </AnimatePresence>
 
+
+
+
+
             {/* ══════════════════════════════════
                 §6  VALUES — Editorial Dark BG (BIGGER CARDS)
             ══════════════════════════════════ */}
@@ -426,8 +474,8 @@ export default function AboutPage() {
                                 Core principles we<br />
                                 <span className="italic text-gray-500">refuse to compromise.</span>
                             </h2>
-                            <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light">
-                                High-quality engineering isn&apos;t just about writing code or styling vectors. It&apos;s a operational habit of excellence.
+                            <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light text-justify">
+                                From branding and advertisement to AI-powered creatives and full online media management — we help businesses stay relevant, visible, and ahead of the curve. Let's build something extraordinary together.
                             </p>
                         </div>
 
@@ -448,15 +496,23 @@ export default function AboutPage() {
                             ))}
                         </div>
                     </div>
+
                 </div>
+
             </section>
+
+
+
 
             {/* ══════════════════════════════════
                 §7  FREQUENTLY ASKED QUESTIONS — Dark Charcoal BG (NEW SECTION)
             ══════════════════════════════════ */}
             <section className="bg-[#0C0C0C] text-white py-14 md:py-16 border-b border-white/[0.05]">
+
                 <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-20">
+
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+
                         <div className="lg:col-span-5 space-y-6">
                             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-[10px] font-mono font-bold tracking-[.2em] uppercase text-gray-400">
                                 <HelpCircle className="w-3.5 h-3.5 text-[#D32F2F]" /> FAQ / Section 06
@@ -508,50 +564,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* ══════════════════════════════════
-                §8  GLOBAL IMPACT & CTA — Dual BG Split (BIGGER CARDS)
-            ══════════════════════════════════ */}
-            <section className="bg-white text-black py-14 md:py-16">
-                <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-20">
-                    <div className="relative bg-black text-white rounded-[32px] overflow-hidden px-8 py-16 sm:p-16 md:p-24 shadow-2xl border border-white/[0.05]">
-                        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 60% 60% at 50% 0%, rgba(211,47,47,0.08) 0%, transparent 80%)" }} />
 
-                        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                            <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left gap-5">
-                                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-[10px] font-mono font-bold tracking-[.2em] uppercase text-gray-400">
-                                    <Globe className="w-3.5 h-3.5 text-[#D32F2F]" /> Action / Section 08
-                                </span>
-                                <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-white leading-tight tracking-tight">
-                                    Engineering value in <span className="italic text-gray-400">14+ countries</span>
-                                </h2>
-                                <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light max-w-lg">
-                                    From London to Dubai, Singapore to New York. We operate async-first and timezone-agile to support global enterprise scale. Let&apos;s build something extraordinary together.
-                                </p>
-                                <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-3">
-                                    <Link href="/contact" className="w-full sm:w-auto">
-                                        <button className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4.5 bg-white text-black font-bold text-xs tracking-wider uppercase rounded-2xl hover:bg-gray-100 transition-all cursor-pointer">
-                                            Start a Project <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                                        </button>
-                                    </Link>
-                                    <Link href="/deliverables" className="w-full sm:w-auto">
-                                        <button className="group flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4.5 border border-white/[0.15] bg-white/[0.05] text-white font-bold text-xs tracking-wider uppercase rounded-2xl hover:bg-white/[0.1] transition-all cursor-pointer">
-                                            View Work <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                        </button>
-                                    </Link>
-                                </div>
-                            </div>
-
-                            <div className="lg:col-span-5 flex flex-wrap gap-2.5 justify-center lg:justify-end">
-                                {["United Kingdom", "United Arab Emirates", "United States", "Singapore", "Germany", "Canada", "Australia", "India", "France", "Netherlands", "Japan"].map((c) => (
-                                    <span key={c} className="px-4 py-2.5 bg-white/[0.03] border border-white/[0.06] rounded-xl text-xs font-mono text-gray-400 hover:bg-white/[0.07] transition-all duration-200">
-                                        {c}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
     );
 }
@@ -566,9 +579,8 @@ function GalleryCard({
 }) {
     return (
         <div
-            className={`group relative overflow-hidden rounded-2xl cursor-pointer w-full ${
-                tall ? "h-[520px] sm:h-[600px] md:h-[640px]" : "h-[300px] sm:h-[340px]"
-            } shadow-sm border border-black/5`}
+            className={`group relative overflow-hidden rounded-2xl cursor-pointer w-full ${tall ? "h-[520px] sm:h-[600px] md:h-[640px]" : "h-[300px] sm:h-[340px]"
+                } shadow-sm border border-black/5`}
             onClick={() => onOpen(item)}
         >
             <img
