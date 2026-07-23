@@ -4,9 +4,9 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import {
     ArrowRight, ArrowUpRight,
-    Users, Award, TrendingUp, Globe,
+    Users, Award, TrendingUp,
     Shield, Zap, Heart, CheckCircle2,
-    Star, Film, Code2, Palette, Lightbulb, Target, Quote,
+    Star, Film, Code2, Palette, Lightbulb, Target,
     HelpCircle, Camera, ChevronDown, X
 } from "lucide-react";
 import Link from "next/link";
@@ -307,7 +307,7 @@ export default function AboutPage() {
             {/* ══════════════════════════════════
                 §4  LEADERSHIP — Soft Light Grey BG (WHITE & NICE CARDS, NO GLOW)
             ══════════════════════════════════ */}
-            <section className="bg-[#F5F5F7] text-black py-14 md:py-16 border-b border-gray-100">
+            {/* <section className="bg-[#F5F5F7] text-black py-14 md:py-16 border-b border-gray-100">
                 <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-20">
                     <div className="text-center mb-12">
                         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/[0.04] border border-black/[0.08] text-[10px] font-mono font-bold tracking-[.2em] uppercase text-gray-500 mb-4">
@@ -342,7 +342,7 @@ export default function AboutPage() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
 
 
