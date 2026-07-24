@@ -340,24 +340,38 @@ export const servicesData: Record<string, CategoryData> = {
         process: [
             {
                 step: "01",
-                title: "Campaign Audit",
-                desc: "We analyze target conversions, audit track pixels setup, and identify past campaign leakage points to shape budgeting plans.",
-                details: "Pixel Auditing | Conversion Tracking | Historical Analysis",
-                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop"
+                title: "Discover & Strategize",
+                desc: "Understand the business, analyze competitors, identify the target audience, and develop a customized digital marketing strategy with clear goals and KPIs.",
+                details: "Brand & business analysis | Competitor research | Audience identification | Marketing strategy & planning",
+                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop"
             },
             {
                 step: "02",
-                title: "Placement Execution",
-                desc: "Our copywriters and campaign builders design and deploy targeted media assets and bidding thresholds across network placements.",
-                details: "Bidding Settings | Creative Execution | Campaign Launch",
-                image: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1000&auto=format&fit=crop"
+                title: "Create & Plan",
+                desc: "Develop engaging content and creative assets aligned with the brand identity and monthly campaign objectives.",
+                details: "Content calendar | Graphic design & videos | Copywriting | Creative campaign planning",
+                image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1000&auto=format&fit=crop"
             },
             {
                 step: "03",
-                title: "Optimization Sprints",
-                desc: "We analyze ROI performance, dynamically shift ad spending, and run conversion rate testing for continuous scaling.",
-                details: "ROAS Calculations | Budget Optimization | A/B Experiments",
-                image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1000&auto=format&fit=crop"
+                title: "Execute & Promote",
+                desc: "Publish content across digital platforms and launch targeted advertising campaigns to maximize reach, engagement, and lead generation.",
+                details: "Social media management | Meta & Google Ads | Community engagement | Campaign execution",
+                image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                step: "04",
+                title: "Optimize & Convert",
+                desc: "Enhance website visibility, improve customer journeys, and automate lead management to increase conversions.",
+                details: "SEO optimization | Landing page improvements | WhatsApp & CRM automation | Lead nurturing",
+                image: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1000&auto=format&fit=crop"
+            },
+            {
+                step: "05",
+                title: "Measure & Scale",
+                desc: "Monitor campaign performance, analyze key metrics, and continuously optimize strategies to achieve sustainable business growth.",
+                details: "Performance analytics | ROI reporting | Campaign optimization | Growth scaling",
+                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop"
             }
         ]
     }
