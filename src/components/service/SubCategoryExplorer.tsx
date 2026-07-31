@@ -228,7 +228,7 @@ export default function SubCategoryExplorer({ category }: SubCategoryExplorerPro
                                 className="p-0"
                             >
                                 {/* image hero */}
-                                <div className="relative w-full h-52 sm:h-64 md:h-80 overflow-hidden">
+                                <div className="relative w-full h-52 sm:h-64 md:h-90 overflow-hidden">
                                     <img
                                         src={activeSub.image}
                                         alt={activeSub.name}

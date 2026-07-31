@@ -63,13 +63,13 @@ export default function WeOffer({ category }: { category: any }) {
 
 
                             {/* Dummy Image Detail */}
-                            <div className="aspect-video overflow-hidden relative">
+                            <div className="h-full overflow-hidden relative">
 
 
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
 
                                 <img
-                                    src={`https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop&sig=${idx}`}
+                                    src={sub.image}
                                     alt={sub.name}
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
                                 />

@@ -59,7 +59,7 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "Delivers result-driven advertising and integrated media communication strategies that maximize brand visibility, engage target audiences, strengthen market presence, and generate measurable business growth across digital and traditional platforms.",
                 chooseUs: ["Integrated Advertising Campaigns", "Digital & Traditional Media Planning", "Brand Communication Strategy", "Performance Marketing & Audience Engagement"],
                 deliverables: ["End-to-End Advertising Campaign Plan", "Media Planning & Buying Strategy", "Creative Advertising Assets", "Campaign Performance Analytics & Optimization"],
-                image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1200&auto=format&fit=crop"
+                image: "/1200 X 797 advertisement.jpg.jpeg"
             },
             {
                 name: "Public Relations & Reputation Management",
@@ -67,7 +67,7 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "Builds trusted brand reputations through strategic public relations, media engagement, crisis communication, and reputation management, strengthening credibility, fostering stakeholder confidence, and ensuring long-term brand value.",
                 chooseUs: ["Media Relations & Press Communication", "Corporate Reputation Management", "Crisis Communication Planning", "Stakeholder & Community Engagement"],
                 deliverables: ["Public Relations Strategy", "Press Releases & Media Kits", "Crisis Communication Framework", "Reputation Monitoring & Performance Reports"],
-                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+                image: "/1200 X 797 public relation & reputation management.jpg.jpeg"
             }
         ],
         process: [
