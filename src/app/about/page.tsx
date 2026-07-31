@@ -264,14 +264,14 @@ export default function AboutPage() {
                         <div className="lg:col-span-5 w-full">
                             <div className="relative h-[320px] sm:h-[420px] md:h-[480px] w-full">
                                 <div className="absolute top-0 right-0 w-[85%] h-[82%] rounded-3xl overflow-hidden shadow-2xl border border-black/5">
-                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Collaboration" className="w-full h-full object-cover" />
+                                    <img src="/600 X 400-01.jpg.jpeg" alt="Collaboration" className="w-full h-full object-cover" />
                                 </div>
                                 <div className="absolute bottom-0 left-0 w-[58%] h-[58%] rounded-3xl overflow-hidden shadow-2xl border border-white/50">
-                                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600&auto=format&fit=crop" alt="Workspace" className="w-full h-full object-cover" />
+                                    <img src="/600 X 400-01.jpg.jpeg" alt="Workspace" className="w-full h-full object-cover" />
                                 </div>
                                 <div className="absolute top-[45%] left-[25%] bg-white border border-gray-100 rounded-2xl px-6 py-4 shadow-2xl hidden sm:block">
-                                    <p className="text-2xl font-bold font-mono text-black leading-none">Est. 2016</p>
-                                    <p className="text-[10px] font-mono text-gray-400 tracking-widest uppercase mt-1">Studio / London</p>
+                                    <p className="text-2xl font-bold font-mono text-black leading-none">Est. 2006</p>
+                                    <p className="text-[10px] font-mono text-gray-400 tracking-widest uppercase mt-1">Studio / Kozhikode</p>
                                 </div>
                             </div>
                         </div>

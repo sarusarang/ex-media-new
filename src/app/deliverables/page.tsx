@@ -20,7 +20,7 @@ const deliverablesData = [
         title: "Brand Strategy & Positioning Document",
         desc: "Comprehensive strategic document defining brand vision, mission, values, positioning, target audience, competitive advantage, and long-term growth direction.",
         specs: ["Brand Vision & Mission", "Market Positioning", "Growth Direction"],
-        image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=800&auto=format&fit=crop",
+        image: "/800 X 533 brand strategy and positioning document-01.jpg.jpeg",
         icon: Palette,
     },
     {
@@ -29,7 +29,7 @@ const deliverablesData = [
         title: "Brand Identity Design System",
         desc: "A unified visual framework with logos, colors, typography, and design elements ensuring consistent brand recognition across every touchpoint.",
         specs: ["Logo & Brand Elements", "Visual Language", "Identity Framework"],
-        image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop",
+        image: "/800 X 533 brand identity design system-02.jpg.jpeg",
         icon: Palette,
     },
     {
@@ -38,7 +38,7 @@ const deliverablesData = [
         title: "Logo Design & Brand Mark Development",
         desc: "Distinctive logos and brand marks that represent business identity, enhance recognition, communicate values, and establish a memorable market presence.",
         specs: ["Primary Logo", "Logo Variations", "Usage Concepts", "Brand Symbols"],
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
+        image: "/800 X 533 logo brandd mark-03.jpg.jpeg",
         icon: Palette,
     },
     {
@@ -505,7 +505,7 @@ export default function DeliverablesPage() {
                                     >
                                         <div className="group flex flex-col h-full bg-[#0f0f0f] border border-white/[0.07] rounded-3xl overflow-hidden hover:border-white/20 transition-all duration-300 relative">
                                             {/* Image hero banner */}
-                                            <div className="aspect-video relative overflow-hidden">
+                                            <div className="h-72 relative overflow-hidden">
                                                 <div className="absolute inset-0 bg-black/40 z-10 transition-colors group-hover:bg-black/20 duration-500" />
                                                 <img
                                                     src={item.image}

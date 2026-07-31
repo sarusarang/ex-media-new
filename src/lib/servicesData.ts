@@ -5,6 +5,7 @@ export interface SubCategoryData {
     chooseUs: string[];
     deliverables: string[];
     image: string;
+    speImg?:string
 }
 
 export interface ProcessStep {
@@ -35,7 +36,8 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "Develops strategic brand positioning that defines your unique market identity, strengthens customer perception, builds competitive advantage, and creates consistent brand experiences that drive long-term business growth.",
                 chooseUs: ["Brand Identity & Market Positioning", "Target Audience & Customer Insights", "Competitive Brand Analysis", "Brand Value Proposition Development"],
                 deliverables: ["Comprehensive Brand Strategy Document", "Unique Positioning Statement", "Brand Messaging Framework", "Brand Growth & Implementation Roadmap"],
-                image: "/800 X 533 brand strategy and positioning document-01.jpg.jpeg"
+                image: "/800 X 608 branding and positioning.jpg.jpeg",
+                speImg:"/1200 X 797 branding.jpg.jpeg"
             },
             {
                 name: "Visual Identity & Creative Design",
@@ -43,7 +45,8 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "Creates impactful visual identities that reflect your brand personality, enhance recognition, ensure consistency across platforms, and deliver compelling creative designs that inspire trust, engagement, and lasting impressions.",
                 chooseUs: ["Logo & Brand Identity Design", "Brand Color Palette & Typography", "Marketing & Corporate Collateral Design", "Digital & Print Creative Solutions"],
                 deliverables: ["Professional Logo & Brand Identity System", "Brand Style Guidelines", "Marketing Collateral Design Package", "Social Media & Digital Creative Assets"],
-                image: "/800 X 533 brand identity design system-02.jpg.jpeg"
+                image: "/800 X 608 Visual & Design.jpg.jpeg",
+                speImg:"/1200 X 797 visual & design.jpg.jpeg"
             },
             {
                 name: "Digital Branding & Online Presence",
@@ -51,7 +54,8 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "Builds powerful digital brands through strategic online presence, engaging content, optimized platforms, and consistent customer experiences that increase visibility, credibility, audience engagement, and sustainable business growth.",
                 chooseUs: ["Website & Digital Experience", "Social Media Branding", "Search Engine Visibility (SEO)", "Content Strategy & Online Engagement"],
                 deliverables: ["Responsive Business Website", "Social Media Brand Kit", "SEO & Digital Visibility Strategy", "Content Calendar & Brand Guidelines"],
-                image: "/800 X 608 Digital Branding-03.jpg.jpeg"
+                image: "/800 X 608 Digital Branding-03.jpg.jpeg",
+                speImg:"/1200 X 797 VISUAL & BRANDING.jpg.jpeg"
             },
             {
                 name: "Advertising & Media Communication",
@@ -59,7 +63,8 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "Delivers result-driven advertising and integrated media communication strategies that maximize brand visibility, engage target audiences, strengthen market presence, and generate measurable business growth across digital and traditional platforms.",
                 chooseUs: ["Integrated Advertising Campaigns", "Digital & Traditional Media Planning", "Brand Communication Strategy", "Performance Marketing & Audience Engagement"],
                 deliverables: ["End-to-End Advertising Campaign Plan", "Media Planning & Buying Strategy", "Creative Advertising Assets", "Campaign Performance Analytics & Optimization"],
-                image: "/1200 X 797 advertisement.jpg.jpeg"
+                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop",
+                speImg:"/1200 X 797 advertisement.jpg.jpeg"
             },
             {
                 name: "Public Relations & Reputation Management",
@@ -67,7 +72,8 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "Builds trusted brand reputations through strategic public relations, media engagement, crisis communication, and reputation management, strengthening credibility, fostering stakeholder confidence, and ensuring long-term brand value.",
                 chooseUs: ["Media Relations & Press Communication", "Corporate Reputation Management", "Crisis Communication Planning", "Stakeholder & Community Engagement"],
                 deliverables: ["Public Relations Strategy", "Press Releases & Media Kits", "Crisis Communication Framework", "Reputation Monitoring & Performance Reports"],
-                image: "/1200 X 797 public relation & reputation management.jpg.jpeg"
+                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop",
+                speImg:"/1200 X 797 public relation & reputation management.jpg.jpeg"
             }
         ],
         process: [

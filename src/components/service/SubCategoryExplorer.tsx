@@ -70,9 +70,9 @@ export default function SubCategoryExplorer({ category }: SubCategoryExplorerPro
 
     /* ── animation ─────────────────────────────────────────────────── */
     const panelVariants = {
-        enter:  { opacity: 0, y: 18 },
-        center: { opacity: 1, y: 0,  transition: { duration: 0.42, ease: [0.22, 1, 0.36, 1] as [number,number,number,number] } },
-        exit:   { opacity: 0, y: -14, transition: { duration: 0.22, ease: [0.22, 1, 0.36, 1] as [number,number,number,number] } },
+        enter: { opacity: 0, y: 18 },
+        center: { opacity: 1, y: 0, transition: { duration: 0.42, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
+        exit: { opacity: 0, y: -14, transition: { duration: 0.22, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
     };
 
     const childStagger = {
@@ -80,8 +80,8 @@ export default function SubCategoryExplorer({ category }: SubCategoryExplorerPro
     };
 
     const child = {
-        enter:  { opacity: 0, y: 12 },
-        center: { opacity: 1, y: 0, transition: { duration: 0.38, ease: [0.22, 1, 0.36, 1] as [number,number,number,number] } },
+        enter: { opacity: 0, y: 12 },
+        center: { opacity: 1, y: 0, transition: { duration: 0.38, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
     };
 
     return (
@@ -138,11 +138,10 @@ export default function SubCategoryExplorer({ category }: SubCategoryExplorerPro
                                     <button
                                         key={sub.slug}
                                         onClick={() => select(sub.slug, idx)}
-                                        className={`snap-center shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-full text-[11px] font-semibold tracking-wide transition-all duration-200 ${
-                                            active
-                                                ? "bg-white text-black"
-                                                : "bg-white/[0.05] text-gray-400 hover:bg-white/10 hover:text-white border border-white/[0.06]"
-                                        }`}
+                                        className={`snap-center shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-full text-[11px] font-semibold tracking-wide transition-all duration-200 ${active
+                                            ? "bg-white text-black"
+                                            : "bg-white/[0.05] text-gray-400 hover:bg-white/10 hover:text-white border border-white/[0.06]"
+                                            }`}
                                     >
                                         <span className={`font-mono text-[9px] ${active ? "text-[#D32F2F]" : "text-gray-600"}`}>
                                             {String(idx + 1).padStart(2, "0")}
@@ -171,11 +170,10 @@ export default function SubCategoryExplorer({ category }: SubCategoryExplorerPro
                                     <li key={sub.slug}>
                                         <button
                                             onClick={() => select(sub.slug, idx)}
-                                            className={`relative w-full text-left flex items-center gap-4 px-5 py-4 transition-all duration-300 group ${
-                                                active
-                                                    ? "text-white bg-white/[0.05]"
-                                                    : "text-gray-500 hover:text-gray-300 hover:bg-white/[0.03]"
-                                            }`}
+                                            className={`relative w-full text-left flex items-center gap-4 px-5 py-4 transition-all duration-300 group ${active
+                                                ? "text-white bg-white/[0.05]"
+                                                : "text-gray-500 hover:text-gray-300 hover:bg-white/[0.03]"
+                                                }`}
                                         >
                                             {/* sliding background */}
                                             {active && (
@@ -188,9 +186,8 @@ export default function SubCategoryExplorer({ category }: SubCategoryExplorerPro
 
                                             {/* large display number */}
                                             <span
-                                                className={`relative z-10 font-serif italic text-2xl xl:text-3xl leading-none w-10 shrink-0 select-none transition-colors duration-300 ${
-                                                    active ? "text-[#D32F2F]" : "text-gray-800 group-hover:text-gray-600"
-                                                }`}
+                                                className={`relative z-10 font-serif italic text-2xl xl:text-3xl leading-none w-10 shrink-0 select-none transition-colors duration-300 ${active ? "text-[#D32F2F]" : "text-gray-800 group-hover:text-gray-600"
+                                                    }`}
                                                 style={{ fontVariantNumeric: "oldstyle-nums" }}
                                             >
                                                 {String(idx + 1).padStart(2, "0")}
@@ -228,14 +225,15 @@ export default function SubCategoryExplorer({ category }: SubCategoryExplorerPro
                                 className="p-0"
                             >
                                 {/* image hero */}
-                                <div className="relative w-full h-52 sm:h-64 md:h-90 overflow-hidden">
+                                <div className="relative w-full aspect-auto overflow-hidden">
                                     <img
-                                        src={activeSub.image}
+                                        src={activeSub.speImg || activeSub.image}
                                         alt={activeSub.name}
-                                        className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-1000"
+                                        loading="lazy"
+                                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/10 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
 
                                     {/* overlay text */}
                                     <div className="absolute bottom-5 left-6">

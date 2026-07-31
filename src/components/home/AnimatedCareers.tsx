@@ -40,7 +40,7 @@ export default function AnimatedCareers() {
 
                         {/* Sample high quality image for careers vibe */}
                         <img
-                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
+                            src="/1200 x 800-01.jpg.jpg"
                             alt="Team Collaboration"
                             loading="lazy"
                             className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
