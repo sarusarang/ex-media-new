@@ -35,7 +35,7 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "Develops strategic brand positioning that defines your unique market identity, strengthens customer perception, builds competitive advantage, and creates consistent brand experiences that drive long-term business growth.",
                 chooseUs: ["Brand Identity & Market Positioning", "Target Audience & Customer Insights", "Competitive Brand Analysis", "Brand Value Proposition Development"],
                 deliverables: ["Comprehensive Brand Strategy Document", "Unique Positioning Statement", "Brand Messaging Framework", "Brand Growth & Implementation Roadmap"],
-                image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=1200&auto=format&fit=crop"
+                image: "/800 X 533 brand strategy and positioning document-01.jpg.jpeg"
             },
             {
                 name: "Visual Identity & Creative Design",
@@ -43,7 +43,7 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "Creates impactful visual identities that reflect your brand personality, enhance recognition, ensure consistency across platforms, and deliver compelling creative designs that inspire trust, engagement, and lasting impressions.",
                 chooseUs: ["Logo & Brand Identity Design", "Brand Color Palette & Typography", "Marketing & Corporate Collateral Design", "Digital & Print Creative Solutions"],
                 deliverables: ["Professional Logo & Brand Identity System", "Brand Style Guidelines", "Marketing Collateral Design Package", "Social Media & Digital Creative Assets"],
-                image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200&auto=format&fit=crop"
+                image: "/800 X 533 brand identity design system-02.jpg.jpeg"
             },
             {
                 name: "Digital Branding & Online Presence",
@@ -51,7 +51,7 @@ export const servicesData: Record<string, CategoryData> = {
                 desc: "Builds powerful digital brands through strategic online presence, engaging content, optimized platforms, and consistent customer experiences that increase visibility, credibility, audience engagement, and sustainable business growth.",
                 chooseUs: ["Website & Digital Experience", "Social Media Branding", "Search Engine Visibility (SEO)", "Content Strategy & Online Engagement"],
                 deliverables: ["Responsive Business Website", "Social Media Brand Kit", "SEO & Digital Visibility Strategy", "Content Calendar & Brand Guidelines"],
-                image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200&auto=format&fit=crop"
+                image: "/800 X 608 Digital Branding-03.jpg.jpeg"
             },
             {
                 name: "Advertising & Media Communication",
