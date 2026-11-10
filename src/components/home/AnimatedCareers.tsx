@@ -104,8 +104,8 @@ export default function AnimatedCareers() {
                         </span>
 
 
-                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif font-medium tracking-tight mb-8 leading-[1.1] text-white">
-                            We Help You With Brand Positioning <br />
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium tracking-tight mb-6 leading-[1.18] text-white">
+                            We Help You With Brand Positioning <br className="hidden sm:inline" />
                             & Empower the Business
                         </h2>
 
