@@ -142,13 +142,7 @@ textarea {
   font-family: var(--font-montserrat), "Montserrat", sans-serif;
 }
 
-/* Retain original font on Header and Parallax Pinned Scroll section */
-header,
-header .font-serif,
-header .font-sans {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif !important;
-}
-
+/* Retain original geometric font on Parallax Pinned Scroll wireframe section */
 [data-section="parallax-scroll"],
 [data-section="parallax-scroll"] *,
 [data-section="parallax-scroll"] .font-sans,

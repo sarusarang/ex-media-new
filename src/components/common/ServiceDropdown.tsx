@@ -43,7 +43,7 @@ export const DesktopServiceDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onI
                         {/* Left Side: Capabilities Header */}
                         <div className="w-full lg:w-[220px] shrink-0 flex flex-col justify-between pr-8 lg:border-r lg:border-white/10">
                             <div>
-                                <h2 className="text-2xl font-serif leading-tight mb-6 font-medium text-gray-100">
+                                <h2 className="text-2xl leading-tight mb-6 font-medium text-gray-100">
                                     Building Strong
                                     Capabilities to
                                     Empower Your

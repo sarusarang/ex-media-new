@@ -78,7 +78,6 @@ export default function Header() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            style={{ fontFamily: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif' }}
             className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isTransparent
                 ? "bg-transparent text-white"
                 : "bg-white text-black shadow-sm"
@@ -125,10 +124,10 @@ export default function Header() {
 
                                 <Link
                                     href={link.href}
-                                    className={`relative py-1 text-xs tracking-widest uppercase transition-all duration-300 hover:-translate-y-0.5 font-serif flex items-center gap-1 ${isTransparent ? "hover:text-gray-300" : "hover:text-gray-600"
+                                    className={`relative py-1 text-xs tracking-widest uppercase transition-all duration-300 hover:-translate-y-0.5 flex items-center gap-1 ${isTransparent ? "hover:text-gray-300" : "hover:text-gray-600"
                                         } ${(pathname === link.href && !isHome) || (isHome && pathname === link.href) || (link.name === "Service" && isServiceDropdownOpen)
-                                            ? "opacity-100 italic font-bold"
-                                            : "opacity-80"
+                                            ? "opacity-100 font-bold"
+                                            : "opacity-80 font-medium"
                                         }`}
                                 >
 
@@ -164,7 +163,7 @@ export default function Header() {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className={`group flex items-center gap-2 px-5 py-4 rounded-full text-xs font-bold tracking-wide uppercase transition-all font-serif italic hover:cursor-pointer ${isTransparent
+                                className={`group flex items-center gap-2 px-5 py-4 rounded-full text-xs font-bold tracking-wide uppercase transition-all hover:cursor-pointer ${isTransparent
                                     ? "bg-white text-black hover:bg-gray-100 hover:shadow-lg"
                                     : "bg-black text-white hover:bg-gray-800 hover:shadow-lg"
                                     }`}
@@ -270,7 +269,7 @@ export default function Header() {
                             >
 
                                 <Link href="/contact">
-                                    <button className="group flex items-center justify-center gap-2 w-full bg-black text-white px-6 py-3 rounded-xl text-center font-bold tracking-wide uppercase shadow-md hover:bg-gray-800 transition-all hover:cursor-pointer font-serif italic">
+                                    <button className="group flex items-center justify-center gap-2 w-full bg-black text-white px-6 py-3 rounded-xl text-center font-bold tracking-wide uppercase shadow-md hover:bg-gray-800 transition-all hover:cursor-pointer">
                                         Let&apos;s Talk
                                         <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                                     </button>
