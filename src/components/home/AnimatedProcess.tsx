@@ -121,7 +121,7 @@ export default function AnimatedProcess() {
                                     </div>
 
 
-                                    <p className="text-lg md:text-2xl text-gray-600 font-light leading-relaxed max-w-xl text-justify">
+                                    <p className="text-lg md:text-2xl text-gray-600 font-light leading-relaxed max-w-xl">
                                         {processSteps[activeStep].description}
                                     </p>
 

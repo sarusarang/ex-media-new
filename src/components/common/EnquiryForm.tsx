@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { motion, Variants } from "framer-motion";
-import { Linkedin, Send, ChevronDown, User, Briefcase, Mail, Phone } from "lucide-react";
+import { Linkedin, Send, ChevronDown, User, Briefcase, Mail, Phone, CheckCircle2 } from "lucide-react";
 
 
 
@@ -11,6 +11,17 @@ export default function EnquiryForm() {
 
 
     const [messageLength, setMessageLength] = useState(0);
+    const [submitted, setSubmitted] = useState(false);
+    const [submitting, setSubmitting] = useState(false);
+
+    const handleFormSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        setSubmitting(true);
+        setTimeout(() => {
+            setSubmitting(false);
+            setSubmitted(true);
+        }, 600);
+    };
 
 
 
@@ -99,8 +110,8 @@ export default function EnquiryForm() {
                                         <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent z-10" />
 
                                         <img
-                                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
-                                            alt="Anoop K Joseph"
+                                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop"
+                                            alt="Krishnendu"
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
                                         />
 
@@ -108,9 +119,14 @@ export default function EnquiryForm() {
 
                                     <div className="flex flex-col">
 
-                                        <h4 className="text-xl font-bold text-white mb-1">Anoop K Joseph</h4>
+                                        <h4 className="text-xl font-bold text-white mb-1">Krishnendu</h4>
                                         <p className="text-sm font-medium text-[#D32F2F] mb-3">Global Sales Head</p>
-                                        <a href="#" className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-colors duration-300">
+                                        <a
+                                            href="https://www.linkedin.com/company/exmedia1/posts/?feedView=all"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-colors duration-300"
+                                        >
                                             <Linkedin className="w-4 h-4 text-gray-300" />
                                         </a>
 
@@ -145,7 +161,25 @@ export default function EnquiryForm() {
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-linear-to-r from-transparent via-[#D32F2F]/50 to-transparent" />
 
 
-                            <form className="space-y-8 relative z-10">
+                            {submitted ? (
+                                <div className="py-12 text-center flex flex-col items-center justify-center space-y-4 relative z-10">
+                                    <div className="w-16 h-16 rounded-full bg-green-900/30 border border-green-700/40 flex items-center justify-center text-green-400">
+                                        <CheckCircle2 className="w-8 h-8" />
+                                    </div>
+                                    <h3 className="text-2xl font-serif font-bold text-white">Enquiry Sent!</h3>
+                                    <p className="text-gray-400 text-sm max-w-sm leading-relaxed">
+                                        Thank you for reaching out. Our team will review your project details and get back to you within 24 hours.
+                                    </p>
+                                    <button
+                                        type="button"
+                                        onClick={() => setSubmitted(false)}
+                                        className="mt-4 px-8 py-3 bg-white text-black font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-gray-100 transition-colors cursor-pointer"
+                                    >
+                                        Send Another Enquiry
+                                    </button>
+                                </div>
+                            ) : (
+                                <form onSubmit={handleFormSubmit} className="space-y-8 relative z-10">
 
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -246,11 +280,12 @@ export default function EnquiryForm() {
                                     <motion.button
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
-                                        className="w-full py-5 px-8 rounded-xl bg-white text-black font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-3 group relative overflow-hidden"
-                                        type="button"
+                                        className="w-full py-5 px-8 rounded-xl bg-white text-black font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-3 group relative overflow-hidden cursor-pointer disabled:opacity-50"
+                                        type="submit"
+                                        disabled={submitting}
                                     >
                                         <span className="relative z-10 flex items-center gap-2">
-                                            Send Enquiry
+                                            {submitting ? "Sending..." : "Send Enquiry"}
                                             <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                         </span>
 
@@ -262,6 +297,7 @@ export default function EnquiryForm() {
                                 </div>
 
                             </form>
+                            )}
 
 
                         </div>

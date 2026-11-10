@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { PlayCircle, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 
 
@@ -73,15 +74,19 @@ export default function HeroSlider() {
                         className="flex flex-col sm:flex-row gap-4"
                     >
 
-                        <button className="group flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wider text-sm rounded-full hover:bg-gray-100 hover:scale-105 hover:shadow-xl transition-all w-full sm:w-auto font-serif italic hover:cursor-pointer">
-                            <PlayCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                            Our Work
-                        </button>
+                        <Link href="/deliverables" className="w-full sm:w-auto">
+                            <button className="group flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-bold uppercase tracking-wider text-sm rounded-full hover:bg-gray-100 hover:scale-105 hover:shadow-xl transition-all w-full sm:w-auto font-serif italic hover:cursor-pointer">
+                                <PlayCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                Our Work
+                            </button>
+                        </Link>
 
-                        <button className="group flex items-center justify-center gap-2 px-8 py-4 bg-transparent border border-white text-white font-bold uppercase tracking-wider text-sm rounded-full hover:bg-white/10 hover:scale-105 hover:shadow-xl transition-all w-full sm:w-auto font-serif italic hover:cursor-pointer">
-                            Services
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        <Link href="/service" className="w-full sm:w-auto">
+                            <button className="group flex items-center justify-center gap-2 px-8 py-4 bg-transparent border border-white text-white font-bold uppercase tracking-wider text-sm rounded-full hover:bg-white/10 hover:scale-105 hover:shadow-xl transition-all w-full sm:w-auto font-serif italic hover:cursor-pointer">
+                                Services
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </button>
+                        </Link>
 
                     </motion.div>
 

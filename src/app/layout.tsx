@@ -3,7 +3,14 @@ import Footer from "@/components/common/Footer";
 import SmoothScrolling from "@/components/common/SmoothScrolling";
 import ScrollToTop from "@/components/common/ScrollToTop";
 import { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
 
 
 
@@ -101,10 +108,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
 
-    <html lang="en">
+    <html lang="en" className={montserrat.variable}>
 
       <head>
-
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
 
         <script
           type="application/ld+json"
@@ -126,7 +138,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
 
 
-      <body className={`antialiased`}>
+      <body className={`${montserrat.className} antialiased`}>
 
         <SmoothScrolling>
 

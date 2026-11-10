@@ -85,9 +85,9 @@ export default function WeOffer({ category }: { category: any }) {
                             {/* Content */}
                             <div className="p-8 flex flex-col flex-1">
 
-                                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">{sub.name}</h3>
+                                <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-400 transition-colors">{sub.name}</h3>
 
-                                <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+                                <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
                                     Comprehensive and strategically engineered {sub.name.toLowerCase()} solutions tailored precisely to elevate your operations to the next frontier of growth.
                                 </p>
 

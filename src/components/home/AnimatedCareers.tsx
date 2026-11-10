@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 
 
@@ -135,15 +136,17 @@ export default function AnimatedCareers() {
                         className="flex flex-col sm:flex-row gap-5"
                     >
 
-                        <button className="group relative inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-full font-semibold overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
+                        <Link href="/contact">
+                            <button className="group relative inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-full font-semibold overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] cursor-pointer">
 
-                            <span className="relative z-10">Consult Now!</span>
+                                <span className="relative z-10">Consult Now!</span>
 
-                            <ArrowUpRight className="w-5 h-5 relative z-10 group-hover:rotate-45 transition-transform duration-300" />
+                                <ArrowUpRight className="w-5 h-5 relative z-10 group-hover:rotate-45 transition-transform duration-300" />
 
-                            <div className="absolute inset-0 bg-gray-200 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
+                                <div className="absolute inset-0 bg-gray-200 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
 
-                        </button>
+                            </button>
+                        </Link>
 
                     </motion.div>
 

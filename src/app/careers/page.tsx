@@ -88,7 +88,7 @@ export default function CareersPage() {
             ══════════════════════════════════ */}
             <section
                 ref={heroRef}
-                className="relative w-full min-h-[92vh] flex flex-col items-center justify-center overflow-hidden"
+                className="relative w-full min-h-[78vh] sm:min-h-[82vh] flex flex-col items-center justify-center overflow-hidden pt-20 sm:pt-24 pb-12 sm:pb-16"
             >
                 {/* Canvas Background */}
                 <div className="absolute inset-0 z-0 opacity-70">
@@ -106,12 +106,12 @@ export default function CareersPage() {
                 <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent z-10 pointer-events-none" />
 
                 {/* Hero Content */}
-                <div className="relative z-20 w-full max-w-5xl mx-auto px-5 sm:px-10 pt-36 pb-20 text-center flex flex-col items-center">
+                <div className="relative z-20 w-full max-w-5xl mx-auto px-5 sm:px-10 text-center flex flex-col items-center">
                     <motion.span
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.15] bg-white/[0.05] text-[10px] font-mono font-bold tracking-[.25em] uppercase text-gray-300 mb-8 backdrop-blur-sm"
+                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.15] bg-white/[0.05] text-[10px] font-mono font-bold tracking-[.25em] uppercase text-gray-300 mb-5 sm:mb-6 backdrop-blur-sm"
                     >
                         <Briefcase className="w-3.5 h-3.5 text-[#D32F2F]" /> CAREERS AT EXMEDIA
                     </motion.span>
@@ -120,7 +120,7 @@ export default function CareersPage() {
                         initial={{ opacity: 0, y: 35 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.08, ease: "easeOut" }}
-                        className="text-[clamp(2.5rem,7vw,6.5rem)] font-serif font-medium tracking-tight text-white leading-[1.05] mb-6"
+                        className="text-[clamp(2.5rem,7vw,6.5rem)] font-serif font-medium tracking-tight text-white leading-[1.05] mb-4 sm:mb-5"
                     >
                         Build Your Career. <br />
                         <em className="text-gray-400 not-italic italic">Shape Brands.</em>
@@ -130,7 +130,7 @@ export default function CareersPage() {
                         initial={{ opacity: 0, y: 25 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.22 }}
-                        className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl font-light leading-relaxed mb-10"
+                        className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl font-light leading-relaxed mb-8 sm:mb-10"
                     >
                         Join a team that&apos;s been crafting bold brands and cutting-edge creatives since 2006. At exmedia, your ideas don&apos;t just get heard — they get built.
                     </motion.p>
@@ -190,10 +190,10 @@ export default function CareersPage() {
                             custom={1}
                             className="lg:col-span-6 space-y-8"
                         >
-                            <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light text-justify">
+                            <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light">
                                 For nearly two decades, Exmedia has grown by hiring people who think differently. We&apos;re a branding and advertising studio that blends human creativity with AI-powered tools — and we&apos;re looking for people who want to grow at the intersection of both.
                             </p>
-                            <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light text-justify">
+                            <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light">
                                 Here, you won&apos;t be another cog in a content mill. You&apos;ll work directly on real client brands, real campaigns, and real strategy — with the freedom to bring your own voice to the work.
                             </p>
 

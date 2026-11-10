@@ -3,6 +3,7 @@
 import { BorderBeam } from "@/components/ui/border-beam";
 import { ArrowUpRight, MessageCircle, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 
@@ -92,10 +93,12 @@ export default function WhatsApp() {
                     </div>
 
 
-                    <button className="flex items-center gap-4 px-10 py-5 bg-white text-black rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
-                        View Technical Docs
-                        <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </button>
+                    <Link href="/contact" className="inline-block">
+                        <button className="flex items-center gap-4 px-10 py-5 bg-white text-black rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group cursor-pointer">
+                            View Technical Docs
+                            <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                        </button>
+                    </Link>
 
 
                 </motion.div>

@@ -63,7 +63,12 @@ export default function ParallaxPinnedScroll() {
     return (
 
 
-        <section ref={containerRef} className="w-full bg-[#050505] relative h-[500vh]">
+        <section
+            ref={containerRef}
+            data-section="parallax-scroll"
+            className="w-full bg-[#050505] relative h-[500vh]"
+            style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif' }}
+        >
 
 
             <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
@@ -331,7 +336,10 @@ const ZoomOutro = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
 
                 <h1
                     className="text-[18vw] md:text-[20vw] font-black tracking-tighter whitespace-nowrap leading-none text-transparent"
-                    style={{ WebkitTextStroke: "3px rgba(255,255,255,0.9)" }}
+                    style={{
+                        WebkitTextStroke: "3px rgba(255,255,255,0.9)",
+                        fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+                    }}
                 >
                     EXMEDIA
                 </h1>

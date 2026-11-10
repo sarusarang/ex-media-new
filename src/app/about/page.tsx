@@ -162,7 +162,7 @@ export default function AboutPage() {
             ══════════════════════════════════ */}
             <section
                 ref={heroRef}
-                className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden"
+                className="relative w-full min-h-screen min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden pt-20 sm:pt-24 pb-12 sm:pb-16"
             >
                 {/* Canvas */}
                 <div className="absolute inset-0 z-0">
@@ -189,25 +189,27 @@ export default function AboutPage() {
                 <div className="absolute bottom-0 inset-x-0 h-56 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent z-10 pointer-events-none" />
 
                 {/* Content */}
-                <div className="relative z-20 w-full max-w-5xl mx-auto px-5 sm:px-10 pt-36 pb-28 text-center flex flex-col items-center">
+                <div className="relative z-20 w-full max-w-5xl mx-auto px-5 sm:px-10 text-center flex flex-col items-center">
                     <motion.span
                         initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.15] bg-white/[0.05] text-[10px] font-mono font-bold tracking-[.25em] uppercase text-gray-300 mb-8 backdrop-blur-sm"
+                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.15] bg-white/[0.05] text-[10px] font-mono font-bold tracking-[.25em] uppercase text-gray-300 mb-5 sm:mb-6 backdrop-blur-sm"
                     >
                         <Users className="w-3 h-3 text-[#D32F2F]" /> Who We Are
                     </motion.span>
 
                     <motion.h1
-                        initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.08 }}
-                        className="text-[clamp(3rem,9vw,7.5rem)] font-serif font-medium tracking-tight text-white leading-[1.04] mb-6"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.9, delay: 0.08 }}
+                        className="text-[clamp(2rem,5.8vw,5.5rem)] font-serif font-medium tracking-tight text-white leading-[1.08] mb-4 sm:mb-5"
                     >
-                        We Build Brands <br />
-                        <em className="text-gray-400 not-italic italic">That Endure</em>
+                        <span className="block whitespace-nowrap">We Build Brands</span>
+                        <em className="text-gray-400 not-italic italic block">That Endure</em>
                     </motion.h1>
 
                     <motion.p
                         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.22 }}
-                        className="text-gray-400 text-base sm:text-lg md:text-xl max-w-xl font-light leading-relaxed mb-10"
+                        className="text-gray-400 text-base sm:text-lg md:text-xl max-w-xl font-light leading-relaxed mb-8 sm:mb-10"
                     >
                         A full-service branding and advertisement studio — delivering creative, strategy, and technology together to help ambitious businesses grow
                     </motion.p>
@@ -248,10 +250,10 @@ export default function AboutPage() {
                                 <span className="italic text-gray-500">precision since 2006</span>
                             </h2>
                             <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-light">
-                                Exmedia was established in 2006 to bridge the gap between creative artistry and advertising strategy. We believe branding shouldn't just look compelling — it must perform.
+                                Exmedia was established in 2006 to bridge the gap between creative artistry and advertising strategy. We believe branding shouldn&apos;t just look compelling — it must perform.
                             </p>
                             <p className="text-gray-600 text-base md:text-lg leading-relaxed font-light">
-                                As a dedicated team of creative and strategic specialists, we deliver the latest AI-integrated creatives, execute advanced marketing strategies tailored to each client, and manage our clients' online media and promotion programs end-to-end — ensuring every brand we touch stays current, consistent, and competitive.
+                                As a dedicated team of creative and strategic specialists, we deliver the latest AI-integrated creatives, execute advanced marketing strategies tailored to each client, and manage our clients&apos; online media and promotion programs end-to-end — ensuring every brand we touch stays current, consistent, and competitive.
                             </p>
                             <div className="flex flex-wrap gap-3 pt-3">
                                 {capabilities.map((c, i) => (
@@ -474,8 +476,8 @@ export default function AboutPage() {
                                 Core principles we<br />
                                 <span className="italic text-gray-500">refuse to compromise.</span>
                             </h2>
-                            <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light text-justify">
-                                From branding and advertisement to AI-powered creatives and full online media management — we help businesses stay relevant, visible, and ahead of the curve. Let's build something extraordinary together.
+                            <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light">
+                                From branding and advertisement to AI-powered creatives and full online media management — we help businesses stay relevant, visible, and ahead of the curve. Let&apos;s build something extraordinary together.
                             </p>
                         </div>
 

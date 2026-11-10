@@ -3,6 +3,7 @@
 import Orb from "../Orb";
 import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 
@@ -67,13 +68,17 @@ export default function AiOrb() {
                     transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                     className="flex flex-col gap-4 sm:flex-row items-center justify-center w-full sm:w-auto pointer-events-auto"
                 >
-                    <button className="w-full sm:w-auto rounded-full bg-white px-8 py-2 font-semibold text-black transition-transform hover:scale-105 shadow-[0_0_40px_-10px_rgba(255,255,255,0.2)] hover:cursor-pointer">
-                        Get Started
-                    </button>
+                    <Link href="/contact" className="w-full sm:w-auto">
+                        <button className="w-full sm:w-auto rounded-full bg-white px-8 py-2 font-semibold text-black transition-transform hover:scale-105 shadow-[0_0_40px_-10px_rgba(255,255,255,0.2)] hover:cursor-pointer">
+                            Get Started
+                        </button>
+                    </Link>
                     
-                    <button className="w-full sm:w-auto rounded-full border border-white/20 bg-black/40 px-8 py-2 font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/40 hover:cursor-pointer">
-                        Learn More
-                    </button>
+                    <Link href="/service" className="w-full sm:w-auto">
+                        <button className="w-full sm:w-auto rounded-full border border-white/20 bg-black/40 px-8 py-2 font-semibold text-white backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/40 hover:cursor-pointer">
+                            Learn More
+                        </button>
+                    </Link>
 
                 </motion.div>
 

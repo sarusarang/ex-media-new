@@ -261,11 +261,11 @@ export default function SubCategoryExplorer({ category }: SubCategoryExplorerPro
                                     variants={childStagger}
                                     initial="enter"
                                     animate="center"
-                                    className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6 sm:p-8 lg:p-10"
+                                    className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-4 sm:gap-y-5 px-6 sm:px-8 lg:px-10 pt-4 sm:pt-5 pb-6 sm:pb-8"
                                 >
                                     {/* description col */}
-                                    <motion.div variants={child} className="md:col-span-12 space-y-2">
-                                        <p className="text-gray-300 text-sm sm:text-[15px] leading-[1.75] font-light max-w-3xl">
+                                    <motion.div variants={child} className="md:col-span-12">
+                                        <p className="text-gray-300 text-sm sm:text-[15px] leading-[1.7] font-light max-w-3xl">
                                             {activeSub.desc}
                                         </p>
                                     </motion.div>

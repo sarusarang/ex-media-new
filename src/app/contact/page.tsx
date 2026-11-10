@@ -9,6 +9,7 @@ import {
     Mail, Phone, MapPin, Send, CheckCircle2,
     ArrowUpRight, Sparkles, MessageSquare,
     Clock, Globe, Instagram, Youtube,
+    User, Briefcase, ChevronDown,
 } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -18,13 +19,11 @@ const Plasma = dynamic(() => import("@/components/Plasma"), { ssr: false });
 
 /* ─────────────────── Zod Schema ─────────────────── */
 const contactSchema = z.object({
-    name: z.string().min(2, "Name must be at least 2 characters"),
+    firstName: z.string().min(2, "First name must be at least 2 characters"),
+    lastName: z.string().optional(),
     email: z.string().email("Please enter a valid email address"),
-    phone: z.string().min(7, "Please enter a valid phone number").optional().or(z.literal("")),
-    subject: z.string().min(3, "Subject must be at least 3 characters"),
-    service: z.string().min(1, "Please select a service"),
-    budget: z.string().optional(),
-    message: z.string().min(20, "Message must be at least 20 characters"),
+    phone: z.string().min(7, "Please enter a valid phone number"),
+    message: z.string().min(5, "Please enter a brief about your project"),
 });
 type ContactFormInputs = z.infer<typeof contactSchema>;
 
@@ -51,23 +50,6 @@ const contactInfo = [
         href: null,
         desc: "Serving clients worldwide",
     },
-];
-
-const services = [
-    "Branding & Identity",
-    "Experience Design",
-    "Photography & Videography",
-    "Digital Marketing",
-    "Social Media Management",
-    "Other / General Enquiry",
-];
-
-const budgets = [
-    "Under ₹50K",
-    "₹50K – ₹1L",
-    "₹1L – ₹5L",
-    "₹5L+",
-    "Let's discuss",
 ];
 
 const socialLinks = [
@@ -112,11 +94,14 @@ export default function ContactPage() {
         register,
         handleSubmit,
         reset,
+        watch,
         formState: { errors },
     } = useForm<ContactFormInputs>({
         resolver: zodResolver(contactSchema),
-        defaultValues: { name: "", email: "", phone: "", subject: "", service: "", budget: "", message: "" },
+        defaultValues: { firstName: "", lastName: "", email: "", phone: "", message: "" },
     });
+
+    const messageValue = watch("message") || "";
 
     const onSubmit = async (data: ContactFormInputs) => {
         setSubmitting(true);
@@ -127,10 +112,6 @@ export default function ContactPage() {
         setSubmitted(true);
     };
 
-    /* shared input classname */
-    const inputCls = (hasError: boolean) =>
-        `w-full bg-white/[0.04] border ${hasError ? "border-red-500" : "border-white/10 focus:border-white/30"} rounded-xl px-4 py-3.5 text-sm text-white placeholder-gray-600 focus:outline-none transition-colors`;
-
     return (
         <main className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
 
@@ -139,7 +120,7 @@ export default function ContactPage() {
             ══════════════════════════════════ */}
             <section
                 ref={heroRef}
-                className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden"
+                className="relative w-full min-h-[78vh] sm:min-h-[82vh] flex flex-col items-center justify-center overflow-hidden pt-20 sm:pt-24 pb-12 sm:pb-16"
             >
                 {/* Plasma background */}
                 <div className="absolute inset-0 z-0">
@@ -160,13 +141,13 @@ export default function ContactPage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/60 via-transparent to-[#050505]/60 z-10 pointer-events-none" />
 
                 {/* Content */}
-                <div className="relative z-20 w-full max-w-5xl mx-auto px-5 sm:px-10 pt-36 pb-28 text-center flex flex-col items-center">
+                <div className="relative z-20 w-full max-w-5xl mx-auto px-5 sm:px-10 text-center flex flex-col items-center">
 
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.15] bg-white/[0.05] text-[10px] font-mono font-bold tracking-[.25em] uppercase text-gray-300 mb-8 backdrop-blur-sm"
+                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.15] bg-white/[0.05] text-[10px] font-mono font-bold tracking-[.25em] uppercase text-gray-300 mb-5 sm:mb-6 backdrop-blur-sm"
                     >
                         <MessageSquare className="w-3 h-3 text-[#D32F2F]" /> Get In Touch
                     </motion.span>
@@ -175,7 +156,7 @@ export default function ContactPage() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.08 }}
-                        className="text-[clamp(3rem,9vw,7.5rem)] font-serif font-medium tracking-tight text-white leading-[1.04] mb-6"
+                        className="text-[clamp(3rem,9vw,7.5rem)] font-serif font-medium tracking-tight text-white leading-[1.04] mb-4 sm:mb-5"
                     >
                         Let&apos;s Build&nbsp;<br />
                         <em className="text-gray-400 not-italic italic">Something Great</em>
@@ -185,7 +166,7 @@ export default function ContactPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.22 }}
-                        className="text-gray-400 text-base sm:text-lg md:text-xl max-w-xl font-light leading-relaxed mb-10"
+                        className="text-gray-400 text-base sm:text-lg md:text-xl max-w-xl font-light leading-relaxed mb-8 sm:mb-10"
                     >
                         Have a project in mind? We&apos;d love to hear from you. Drop us a message and our team will get back to you within 24 hours.
                     </motion.p>
@@ -294,10 +275,10 @@ export default function ContactPage() {
 
                         {/* ── FORM (3 cols) ── */}
                         <FadeUp className="lg:col-span-3" delay={0.1}>
-                            <div className="relative rounded-3xl border border-white/10 bg-white/[0.025] p-8 sm:p-10 overflow-hidden">
+                            <div className="bg-[#0d0d0d] border border-white/5 rounded-[2.5rem] p-8 md:p-12 shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden">
 
-                                {/* glow accent */}
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-[#D32F2F]/15 rounded-full blur-3xl pointer-events-none" />
+                                {/* Form Header Glow */}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-linear-to-r from-transparent via-[#D32F2F]/50 to-transparent" />
 
                                 <AnimatePresence mode="wait">
                                     {submitted ? (
@@ -306,20 +287,21 @@ export default function ContactPage() {
                                             initial={{ opacity: 0, y: 10 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0 }}
-                                            className="py-16 flex flex-col items-center text-center gap-5"
+                                            className="py-12 text-center flex flex-col items-center justify-center space-y-4 relative z-10"
                                         >
                                             <div className="w-16 h-16 rounded-full bg-green-900/30 border border-green-700/40 flex items-center justify-center text-green-400">
                                                 <CheckCircle2 className="w-8 h-8" />
                                             </div>
-                                            <h3 className="text-2xl font-serif font-bold text-white">Message Sent!</h3>
+                                            <h3 className="text-2xl font-serif font-bold text-white">Enquiry Sent!</h3>
                                             <p className="text-gray-400 text-sm max-w-sm leading-relaxed">
-                                                Thanks for reaching out. Our team will review your message and get back to you within 24 hours.
+                                                Thank you for reaching out. Our team will review your project details and get back to you within 24 hours.
                                             </p>
                                             <button
+                                                type="button"
                                                 onClick={() => { setSubmitted(false); reset(); }}
                                                 className="mt-4 px-8 py-3 bg-white text-black font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-gray-100 transition-colors cursor-pointer"
                                             >
-                                                Send Another
+                                                Send Another Enquiry
                                             </button>
                                         </motion.div>
                                     ) : (
@@ -329,112 +311,116 @@ export default function ContactPage() {
                                             animate={{ opacity: 1 }}
                                             exit={{ opacity: 0 }}
                                             onSubmit={handleSubmit(onSubmit)}
-                                            className="space-y-6 relative z-10"
+                                            className="space-y-8 relative z-10"
                                         >
-                                            {/* Row 1: Name + Email */}
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                                <div>
-                                                    <label className="block text-[11px] font-mono font-bold uppercase tracking-widest text-gray-400 mb-2">Full Name *</label>
+                                            {/* Row 1: First Name + Last Name */}
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                                <div className="space-y-3 group">
+                                                    <label className="text-sm font-medium text-gray-400 group-focus-within:text-[#D32F2F] transition-colors flex items-center gap-2">
+                                                        <User className="w-4 h-4" /> First Name*
+                                                    </label>
                                                     <input
-                                                        {...register("name")}
-                                                        placeholder="John Doe"
-                                                        className={inputCls(!!errors.name)}
+                                                        {...register("firstName")}
+                                                        type="text"
+                                                        placeholder="Enter first name"
+                                                        className="w-full bg-[#151515] border-transparent rounded-xl px-5 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-[#D32F2F] focus:bg-[#111] transition-all duration-300 shadow-inner shadow-black/20"
                                                     />
-                                                    {errors.name && <p className="text-red-400 text-xs mt-1 font-mono">{errors.name.message}</p>}
+                                                    {errors.firstName && (
+                                                        <p className="text-red-400 text-xs mt-1 font-mono">{errors.firstName.message}</p>
+                                                    )}
                                                 </div>
-                                                <div>
-                                                    <label className="block text-[11px] font-mono font-bold uppercase tracking-widest text-gray-400 mb-2">Email Address *</label>
+
+                                                <div className="space-y-3 group">
+                                                    <label className="text-sm font-medium text-gray-400 group-focus-within:text-white transition-colors flex items-center gap-2">
+                                                        <User className="w-4 h-4 opacity-50" /> Last Name
+                                                    </label>
+                                                    <input
+                                                        {...register("lastName")}
+                                                        type="text"
+                                                        placeholder="Enter last name"
+                                                        className="w-full bg-[#151515] border-transparent rounded-xl px-5 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-white/20 focus:bg-[#111] transition-all duration-300 shadow-inner shadow-black/20"
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            {/* Row 2: Email + Phone */}
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                                <div className="space-y-3 group">
+                                                    <label className="text-sm font-medium text-gray-400 group-focus-within:text-[#D32F2F] transition-colors flex items-center gap-2">
+                                                        <Mail className="w-4 h-4" /> Email*
+                                                    </label>
                                                     <input
                                                         {...register("email")}
                                                         type="email"
-                                                        placeholder="john@example.com"
-                                                        className={inputCls(!!errors.email)}
+                                                        placeholder="Enter email"
+                                                        className="w-full bg-[#151515] border-transparent rounded-xl px-5 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-[#D32F2F] focus:bg-[#111] transition-all duration-300 shadow-inner shadow-black/20"
                                                     />
-                                                    {errors.email && <p className="text-red-400 text-xs mt-1 font-mono">{errors.email.message}</p>}
+                                                    {errors.email && (
+                                                        <p className="text-red-400 text-xs mt-1 font-mono">{errors.email.message}</p>
+                                                    )}
+                                                </div>
+
+                                                <div className="space-y-3 group">
+                                                    <label className="text-sm font-medium text-gray-400 group-focus-within:text-[#D32F2F] transition-colors flex items-center gap-2">
+                                                        <Phone className="w-4 h-4" /> Phone Number*
+                                                    </label>
+                                                    <div className="flex bg-[#151515] rounded-xl overflow-hidden focus-within:ring-1 focus-within:ring-[#D32F2F] focus-within:bg-[#111] transition-all duration-300 shadow-inner shadow-black/20">
+                                                        <div className="flex items-center gap-2 px-4 py-4 bg-[#1a1a1a] border-r border-white/5 cursor-pointer hover:bg-[#222] transition-colors shrink-0">
+                                                            <img src="https://flagcdn.com/w20/in.png" alt="India Flag" className="w-5 h-auto rounded-sm" />
+                                                            <ChevronDown className="w-4 h-4 text-gray-400" />
+                                                            <span className="text-gray-300 text-sm ml-1">+91</span>
+                                                        </div>
+                                                        <input
+                                                            {...register("phone")}
+                                                            type="tel"
+                                                            placeholder="Phone number"
+                                                            className="w-full bg-transparent border-none px-4 py-4 text-white placeholder:text-gray-600 focus:outline-none"
+                                                        />
+                                                    </div>
+                                                    {errors.phone && (
+                                                        <p className="text-red-400 text-xs mt-1 font-mono">{errors.phone.message}</p>
+                                                    )}
                                                 </div>
                                             </div>
 
-                                            {/* Row 2: Phone + Service */}
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                                <div>
-                                                    <label className="block text-[11px] font-mono font-bold uppercase tracking-widest text-gray-400 mb-2">Phone / WhatsApp</label>
-                                                    <input
-                                                        {...register("phone")}
-                                                        type="tel"
-                                                        placeholder="+91 9876 543 210"
-                                                        className={inputCls(!!errors.phone)}
-                                                    />
-                                                    {errors.phone && <p className="text-red-400 text-xs mt-1 font-mono">{errors.phone.message}</p>}
+                                            {/* Row 3: Tell Us More */}
+                                            <div className="space-y-3 group">
+                                                <div className="flex justify-between items-center">
+                                                    <label className="text-sm font-medium text-gray-400 group-focus-within:text-white transition-colors flex items-center gap-2">
+                                                        <Briefcase className="w-4 h-4" /> Tell Us More
+                                                    </label>
+                                                    <span className="text-xs text-gray-600">{messageValue.length}/1000</span>
                                                 </div>
-                                                <div>
-                                                    <label className="block text-[11px] font-mono font-bold uppercase tracking-widest text-gray-400 mb-2">Service Interested In *</label>
-                                                    <select
-                                                        {...register("service")}
-                                                        className={`${inputCls(!!errors.service)} appearance-none bg-[#0d0d0d]`}
-                                                    >
-                                                        <option value="" className="bg-[#0d0d0d]">Select a service...</option>
-                                                        {services.map((s) => (
-                                                            <option key={s} value={s} className="bg-[#0d0d0d]">{s}</option>
-                                                        ))}
-                                                    </select>
-                                                    {errors.service && <p className="text-red-400 text-xs mt-1 font-mono">{errors.service.message}</p>}
-                                                </div>
-                                            </div>
-
-                                            {/* Row 3: Subject + Budget */}
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                                <div>
-                                                    <label className="block text-[11px] font-mono font-bold uppercase tracking-widest text-gray-400 mb-2">Subject *</label>
-                                                    <input
-                                                        {...register("subject")}
-                                                        placeholder="e.g. Brand Identity for my startup"
-                                                        className={inputCls(!!errors.subject)}
-                                                    />
-                                                    {errors.subject && <p className="text-red-400 text-xs mt-1 font-mono">{errors.subject.message}</p>}
-                                                </div>
-                                                <div>
-                                                    <label className="block text-[11px] font-mono font-bold uppercase tracking-widest text-gray-400 mb-2">Estimated Budget</label>
-                                                    <select
-                                                        {...register("budget")}
-                                                        className={`${inputCls(false)} appearance-none bg-[#0d0d0d]`}
-                                                    >
-                                                        <option value="" className="bg-[#0d0d0d]">Select a range...</option>
-                                                        {budgets.map((b) => (
-                                                            <option key={b} value={b} className="bg-[#0d0d0d]">{b}</option>
-                                                        ))}
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            {/* Message */}
-                                            <div>
-                                                <label className="block text-[11px] font-mono font-bold uppercase tracking-widest text-gray-400 mb-2">Your Message *</label>
                                                 <textarea
                                                     {...register("message")}
-                                                    rows={5}
-                                                    placeholder="Tell us about your project, goals, timeline, and anything else that will help us understand your needs..."
-                                                    className={`${inputCls(!!errors.message)} resize-none`}
+                                                    rows={4}
+                                                    placeholder="Brief about your project"
+                                                    maxLength={1000}
+                                                    className="w-full bg-[#151515] border-transparent rounded-xl px-5 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-white/20 focus:bg-[#111] transition-all duration-300 shadow-inner shadow-black/20 resize-none"
                                                 />
-                                                {errors.message && <p className="text-red-400 text-xs mt-1 font-mono">{errors.message.message}</p>}
+                                                {errors.message && (
+                                                    <p className="text-red-400 text-xs mt-1 font-mono">{errors.message.message}</p>
+                                                )}
                                             </div>
 
-                                            {/* Submit */}
-                                            <button
-                                                type="submit"
-                                                disabled={submitting}
-                                                className="w-full inline-flex items-center justify-center gap-2.5 py-4 bg-white text-black font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gray-100 transition-all cursor-pointer shadow-lg disabled:opacity-50"
-                                            >
-                                                {submitting ? (
-                                                    <>
-                                                        <span className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
-                                                        Sending Message...
-                                                    </>
-                                                ) : (
-                                                    <>
-                                                        Send Message <Send className="w-4 h-4" />
-                                                    </>
-                                                )}
-                                            </button>
+                                            {/* Row 4: Submit button */}
+                                            <div className="pt-4">
+                                                <motion.button
+                                                    whileHover={{ scale: 1.02 }}
+                                                    whileTap={{ scale: 0.98 }}
+                                                    className="w-full py-5 px-8 rounded-xl bg-white text-black font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-3 group relative overflow-hidden cursor-pointer disabled:opacity-50"
+                                                    type="submit"
+                                                    disabled={submitting}
+                                                >
+                                                    <span className="relative z-10 flex items-center gap-2">
+                                                        {submitting ? "Sending..." : "Send Enquiry"}
+                                                        <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                                    </span>
+
+                                                    {/* Hover Overlay */}
+                                                    <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#D32F2F]/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                                                </motion.button>
+                                            </div>
 
                                             <p className="text-center text-xs text-gray-600">
                                                 By submitting you agree to our{" "}

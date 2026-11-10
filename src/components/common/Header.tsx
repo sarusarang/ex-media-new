@@ -78,6 +78,7 @@ export default function Header() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            style={{ fontFamily: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif' }}
             className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isTransparent
                 ? "bg-transparent text-white"
                 : "bg-white text-black shadow-sm"
